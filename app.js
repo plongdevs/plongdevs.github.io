@@ -18,7 +18,7 @@ const apps = [
         img: './img/appicons/playping.jpg',
         descriptions: 'Playping No update by ©PLong X Nguyễn Tiêu',
         size: '16 MB',
-        updated: '08/10/2025'
+        updated: '09/10/2025'
     },
     {
         id: 'netwing',
@@ -27,7 +27,7 @@ const apps = [
         img: './img/appicons/netwing.jpg',
         descriptions: 'Hack FakeLag Anti thấp ko nên tải',
         size: '34 MB',
-        updated: '07/10/2025'
+        updated: '09/10/2025'
     },
     {
         id: 'fayfay',
@@ -36,7 +36,7 @@ const apps = [
         img: './img/appicons/fayfayconfig.jpg',
         descriptions: 'PlayPing bản cũ chống ban anti 100%',
         size: '4 MB',
-        updated: '06/10/2025'
+        updated: '09/10/2025'
     },
 ];
 
@@ -57,7 +57,7 @@ const datafile = [
         img: 'img/pf/zip.png',
         descriptions: 'Dùng để tank bo cho ae antiband 100%',
         size: '6 MB',
-        updated: '08/10/2025'
+        updated: '09/10/2025'
     },
     {
         id: 'dontho',
@@ -66,7 +66,7 @@ const datafile = [
         img: 'img/pf/zip.png',
         descriptions: 'Nhớ bật orion khi xuống...',
         size: '29 MB',
-        updated: '08/10/2025'
+        updated: '09/10/2025'
     }
 ];
 
