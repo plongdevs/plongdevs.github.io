@@ -89,57 +89,6 @@ const appContainer = document.querySelector('.app-section');
 const ksignContainer = document.querySelector('.ksign-section');
 
 // ==========================
-// API CONFIG
-// ==========================
-const API_URL = 'https://68e7a81f10e3f82fbf4020dd.mockapi.io/PLongDownloads';
-
-async function getDownloadCount(id, element) {
-    try {
-        const res = await fetch(API_URL);
-        const data = await res.json();
-        const record = data.find(r => r.id === id || r.id === String(id));
-
-        if (record) {
-            element.textContent = record.count;
-        } else {
-            element.textContent = 0;
-        }
-    } catch (err) {
-        console.error(err);
-        element.textContent = 0;
-    }
-}
-
-async function increaseDownloadCount(id, element) {
-    try {
-        const res = await fetch(API_URL);
-        const data = await res.json();
-        let record = data.find(r => r.id === id || r.id === String(id));
-
-        if (record) {
-            const newCount = record.count + 1;
-            await fetch(`${API_URL}/${record.id}`, {
-                method: 'PUT',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ count: newCount })
-            });
-            element.textContent = newCount;
-        } else {
-            // tạo record mới
-            const resPost = await fetch(API_URL, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ id: id, count: 1 })
-            });
-            const newRecord = await resPost.json();
-            element.textContent = newRecord.count;
-        }
-    } catch (err) {
-        console.error(err);
-    }
-}
-
-// ==========================
 // RENDER UI
 // ==========================
 function render(app, index, type) {
@@ -151,7 +100,6 @@ function render(app, index, type) {
                 <p>${app.descriptions}</p>
                 <p><strong>Dung lượng:</strong> ${app.size}</p>
                 <p><strong>Ngày cập nhật:</strong> ${app.updated}</p>
-                <p><strong>Lượt tải:</strong> <span class="download-count" id="dl-${app.id}">nan</span></p>
             </h1>
         </div>
         <a href="${app.url}" target="_blank" class="download-btn" style="color: #007aff; text-decoration: none;">
@@ -167,10 +115,6 @@ function addClickHandler(container, dataArray) {
         if (target) {
             const index = target.getAttribute('data-index');
             const app = dataArray[index];
-            const counterEl = target.querySelector(`#dl-${app.id}`);
-
-            increaseDownloadCount(app.id, counterEl);
-
             const url = target.querySelector('.download-btn').getAttribute('href');
             window.open(url, '_blank');
         }
@@ -191,16 +135,6 @@ if (ksignContainer) {
         ksignContainer.innerHTML += render(app, i, 'ksign');
     });
 }
-
-apps.forEach(app => {
-    const el = document.getElementById(`dl-${app.id}`);
-    getDownloadCount(app.id, el);
-});
-
-datafile.forEach(app => {
-    const el = document.getElementById(`dl-${app.id}`);
-    getDownloadCount(app.id, el);
-});
 
 addClickHandler(appContainer, apps);
 addClickHandler(ksignContainer, datafile);
