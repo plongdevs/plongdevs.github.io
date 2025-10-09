@@ -95,38 +95,44 @@ const API_URL = 'https://68e7a81f10e3f82fbf4020dd.mockapi.io/PLongDownloads';
 
 async function getDownloadCount(id, element) {
     try {
-        const res = await fetch(`${API_URL}?id=${id}`);
+        const res = await fetch(API_URL);
         const data = await res.json();
-        if (data.length > 0) {
-            element.textContent = data[0].count;
+        const record = data.find(r => r.id === id || r.id === String(id));
+
+        if (record) {
+            element.textContent = record.count;
         } else {
-            element.textContent = 'nan';
+            element.textContent = 0;
         }
     } catch (err) {
-        element.textContent = 'nan';
+        console.error(err);
+        element.textContent = 0;
     }
 }
 
 async function increaseDownloadCount(id, element) {
     try {
-        const res = await fetch(`${API_URL}?id=${id}`);
+        const res = await fetch(API_URL);
         const data = await res.json();
+        let record = data.find(r => r.id === id || r.id === String(id));
 
-        if (data.length > 0) {
-            const newCount = data[0].count + 1;
-            await fetch(`${API_URL}/${data[0].id}`, {
+        if (record) {
+            const newCount = record.count + 1;
+            await fetch(`${API_URL}/${record.id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ count: newCount })
             });
             element.textContent = newCount;
         } else {
-            await fetch(API_URL, {
+            // tạo record mới
+            const resPost = await fetch(API_URL, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ id: id, count: 1 })
             });
-            element.textContent = 1;
+            const newRecord = await resPost.json();
+            element.textContent = newRecord.count;
         }
     } catch (err) {
         console.error(err);
