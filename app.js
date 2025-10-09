@@ -6,7 +6,7 @@ const apps = [
         url: 'https://drive.google.com/file/d/19HLe6X61w-V3z3FvWYHv4sO2XpOOrrVA/view?usp=drivesdk',
         img: './img/appicons/fạkelag reborn.jpg',
         descriptions: 'Hack FakeLag chống band vv',
-        size: '22 MB',
+        size: '352 KB',
         updated: '09/10/2025',
         downloads: 0
     },
@@ -15,7 +15,7 @@ const apps = [
         url: 'https://www.mediafire.com/file/80vwmrhzly94e10/PlayPing+No+Update.apk/file',
         img: './img/appicons/playping.jpg',
         descriptions: 'Playping No update by ©PLong X Nguyễn Tiêu',
-        size: '18 MB',
+        size: '16 MB',
         updated: '08/10/2025',
         downloads: 0
     },
@@ -24,7 +24,7 @@ const apps = [
         url: 'https://www.mediafire.com/file/h9xc4z01xj0fwxp/Netwing+0.11.0B.F2++.apk/file',
         img: './img/appicons/netwing.jpg',
         descriptions: 'Hack FakeLag Anti thấp ko nên tải',
-        size: '16 MB',
+        size: '34 MB',
         updated: '07/10/2025',
         downloads: 0
     },
@@ -33,7 +33,7 @@ const apps = [
         url: 'https://www.mediafire.com/file/w691w2cg0u5mrtq/FayFay+Config+2.0.6.apk/file',
         img: './img/appicons/fayfayconfig.jpg',
         descriptions: 'PlayPing bản cũ chống ban anti 100%',
-        size: '15 MB',
+        size: '4 MB',
         updated: '06/10/2025',
         downloads: 0
     },
@@ -45,7 +45,7 @@ const ksignApps = [
         url: 'https://www.mediafire.com/file/7szp1su417oq3iz/Keo+Mini.zip/file',
         img: 'img/pf/zip.png',
         descriptions: 'Áp dụng cho keo TCXH,STXH',
-        size: '3 MB',
+        size: '21 MB',
         updated: '09/10/2025',
         downloads: 0
     },
@@ -54,7 +54,7 @@ const ksignApps = [
         url: 'https://www.mediafire.com/file/lrplx2guoies3ns/xe+bay+đảo+thế+kỉ.zip/file',
         img: 'img/pf/zip.png',
         descriptions: 'Dùng để tank bo cho ae antiband 100%',
-        size: '5 MB',
+        size: '6 MB',
         updated: '08/10/2025',
         downloads: 0
     },
@@ -63,7 +63,7 @@ const ksignApps = [
         url: 'https://www.mediafire.com/file/2faijugnfaqvobm/Tử+chiến+xuyên+lòng+đất.zip/file',
         img: 'img/pf/zip.png',
         descriptions: 'Nhớ bật orion khi xuống...',
-        size: '4 MB',
+        size: '29 MB',
         updated: '08/10/2025',
         downloads: 0
     }
