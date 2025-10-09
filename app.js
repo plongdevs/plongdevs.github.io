@@ -87,32 +87,54 @@ const cloudIcon = `
 // ==========================
 const appContainer = document.querySelector('.app-section');
 const ksignContainer = document.querySelector('.ksign-section');
-const esignContainer = document.querySelector('.esign-section');
 
 // ==========================
-// COUNT API FUNCTIONS
+// API Mock
 // ==========================
-function getDownloadCount(id, element) {
-    fetch(`https://api.countapi.xyz/get/plongdev/${id}`)
-        .then(res => res.json())
-        .then(data => {
-            element.textContent = data.value ?? 0;
-        })
-        .catch(() => {
+const API_URL = 'https://68e7a81f10e3f82fbf4020dd.mockapi.io/downloads';
+
+async function getDownloadCount(id, element) {
+    try {
+        const res = await fetch(`${API_URL}?id=${id}`);
+        const data = await res.json();
+        if (data.length > 0) {
+            element.textContent = data[0].count;
+        } else {
             element.textContent = 0;
-        });
+        }
+    } catch (err) {
+        element.textContent = 0;
+    }
 }
 
-function increaseDownloadCount(id, element) {
-    fetch(`https://api.countapi.xyz/hit/plongdev/${id}`)
-        .then(res => res.json())
-        .then(data => {
-            element.textContent = data.value;
-        });
+async function increaseDownloadCount(id, element) {
+    try {
+        const res = await fetch(`${API_URL}?id=${id}`);
+        const data = await res.json();
+
+        if (data.length > 0) {
+            const newCount = data[0].count + 1;
+            await fetch(`${API_URL}/${data[0].id}`, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ count: newCount })
+            });
+            element.textContent = newCount;
+        } else {
+            await fetch(API_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ id: id, count: 1 })
+            });
+            element.textContent = 1;
+        }
+    } catch (err) {
+        console.error(err);
+    }
 }
 
 // ==========================
-// RENDER
+// RENDER UI
 // ==========================
 function render(app, index, type) {
     return `
@@ -132,9 +154,6 @@ function render(app, index, type) {
     </div>`;
 }
 
-// ==========================
-// CLICK HANDLER
-// ==========================
 function addClickHandler(container, dataArray) {
     if (!container) return;
     container.addEventListener('click', (event) => {
@@ -144,10 +163,8 @@ function addClickHandler(container, dataArray) {
             const app = dataArray[index];
             const counterEl = target.querySelector(`#dl-${app.id}`);
 
-            // Tăng lượt tải
             increaseDownloadCount(app.id, counterEl);
 
-            // Mở link tải
             const url = target.querySelector('.download-btn').getAttribute('href');
             window.open(url, '_blank');
         }
@@ -155,7 +172,7 @@ function addClickHandler(container, dataArray) {
 }
 
 // ==========================
-// INITIALIZATION
+// INIT
 // ==========================
 if (appContainer) {
     apps.forEach((app, i) => {
@@ -169,7 +186,6 @@ if (ksignContainer) {
     });
 }
 
-// Lấy lượt tải khi load web
 apps.forEach(app => {
     const el = document.getElementById(`dl-${app.id}`);
     getDownloadCount(app.id, el);
@@ -180,6 +196,5 @@ ksignApps.forEach(app => {
     getDownloadCount(app.id, el);
 });
 
-// Thêm click handlers
 addClickHandler(appContainer, apps);
 addClickHandler(ksignContainer, ksignApps);
