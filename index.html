@@ -1,33 +1,57 @@
+
+Bạn đã nói:
+Đây là code web của tôi chỉ tôi cách thêm recapcha của cloudflare vào đây mỗi khi vào web nó sẽ hiênj như này
+Đây là code 
+
+
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="ie=edge" http-equiv="X-UA-Compatible" />
     <title>PLongDev</title>
-
     <link href="styles.css" rel="stylesheet" />
-    <link href="app.css" rel="stylesheet" />
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css" rel="stylesheet" /> -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-tomorrow.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-cpp.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-java.min.js"></script>
+    <link href="app.css" rel="stylesheet" />
+    <link as="style"
+        href="https://ipa.chungchi365.com/_nuxt/iconfont-78cf5cacb1b8b5a62052065f527281e56b15ceae3f20ebdfd5fe0cfaebbd737c.Bc_iiR8Q.svg"
+        onload="this.rel='stylesheet'" rel="stylesheet" />
+    </link>
 </head>
+
 <body>
     <!-- Navbar -->
+    <div class="enter"></div>
     <header>
         <nav class="navbar box-shadow">
+            <div class="th"></div>
             <ul class="nav-links">
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#projects">My Stuffs</a></li>
                 <li><a href="#app">Application</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li style="display: flex; width: 26px;">
+                    <svg class="color-mode" height="30" id="colorMode" viewbox="0 0 400 400" width="30">
+                        <circle cx="200" cy="200" fill="white" r="195" stroke="#000" stroke-width="10"></circle>
+                        <path d="M 200 375 A 175 175 0 0 1 200 25"></path>
+                        <path d="M 200 300 A 100 100 0 0 1 200 100" fill="#FFF"></path>
+                        <path d="M 200 100 A 100 100 180 0 1 200 300"></path>
+                    </svg>
+                </li>
             </ul>
-            <div class="menu-button" id="menu-button">☰</div>
+            <div class="menu-button" id="menu-button">
+                ☰ <!-- Hamburger icon -->
+            </div>
         </nav>
     </header>
-
     <!-- Main Section -->
     <main>
         <!-- Profile Section -->
@@ -35,88 +59,1316 @@
             <div class="padding profile">
                 <img alt="Profile Picture" class="profile-pic box-shadow" src="./img/pf/profile-pic.png" />
                 <h2 style="margin-bottom: 0;">Hi, this is</h2>
-                <h1 style="margin-top: 0;">Pham Long 
-                    <img alt="" src="./img/icons/badge.png" style="height: 28px;" />
+                <h1 style="margin-top: 0;">Pham Long <img alt="" src="./img/icons/badge.png" style="height: 28px;" />
                 </h1>
                 <div class="typing">
                     and I'm a <span id="typed-text"></span><span class="cursor">|</span>
                 </div>
-                <br><br>
+                <br />
+                <br />
                 <p>Nếu bạn muốn mua Key AuroraVn giá rẻ thì hãy ib ở bên dưới</p>
                 <div class="social-buttons"></div>
             </div>
         </section>
-
         <!-- Projects Section -->
         <section class="projects-section" id="projects">
             <div class="prj-collum">
+                <h2> </h2>
                 <div class="project">
-                    <h3>Telegram Channel Notification</h3>
-                    <a href="https://t.me/playping01" target="_blank">
-                        <img alt="" src="./img/icons/redirect.png" />
-                    </a>
+                    <h3> Telegram Channel Notification</h3>
+                    <a href="https://t.me/playping01" target="_blank"><img alt=""
+                            src="./img/icons/redirect.png" /></a>
                 </div>
                 <div class="project">
-                    <h3>Box Chat Zalo</h3>
-                    <a href="https://zalo.me/g/vruic971" target="_blank">
-                        <img alt="" src="./img/icons/redirect.png" />
-                    </a>
+                    <h3> Box Chat Zalo</h3>
+                    <a href="https://zalo.me/g/vruic971" target="_blank"><img alt=""
+                            src="./img/icons/redirect.png" /></a>
                 </div>
                 <div class="project">
                     <h3>Box Chat Messenger</h3>
-                    <a href="https://m.me/j/Abb7x2Ql4c0-_b_r/" target="_blank">
-                        <img alt="Discord" src="./img/icons/redirect.png" />
-                    </a>
+					<a href="https://m.me/j/Abb7x2Ql4c0-_b_r/" target="_blank"><img alt="Discord"
+                            src="./img/icons/redirect.png" /></a>
                 </div>
             </div>
+            </div>
+            <div class="proj-collum">
+            </div>
         </section>
-
-        <!-- App Section -->
+        <!-- app section  -->
         <h2 id="app" style="text-align: center;">Cheat App</h2>
-        <section class="app-section" id="app-list">
-            <!-- Danh sách app được render từ app.js -->
+        <section class="app-section">
         </section>
-
         <div class="line"></div>
         <h2 style="text-align: center; margin-top: 5em;">Data</h2>
         <br />
         <div class="ksign-section"></div>
         <div class="line"></div>
-
-        <!-- Skills -->
+        <h2 style="text-align: center; margin-top: 5em;"></h2>
+        <br />
+        <div class="esign-section"></div>
+        <div class="wave-container" id="wave1">
+            <svg viewbox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+                <path class="svg1"
+                    d="M0,288L48,272C96,256,192,224,288,213.3C384,203,480,213,576,213.3C672,213,768,203,864,192C960,181,1056,171,1152,165.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                    fill="#fff" fill-opacity="1"></path>
+            </svg>
+        </div>
+        <!-- Skills Section -->
         <section class="skills-section" id="skills">
             <h2>Programming Language Skills</h2>
             <div class="skill">
                 <span>HTML/CSS/JS</span>
-                <div class="skill-bar"><div class="skill-fill" data-percent="76%" style="background-color: #e34c26;"></div></div>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-percent="76%" style="background-color: #e34c26;"></div>
+                </div>
             </div>
             <div class="skill">
                 <span>Python</span>
-                <div class="skill-bar"><div class="skill-fill" data-percent="68%" style="background-color: #1f5af9;"></div></div>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-percent="68%" style="background-color: #1f5af9;"></div>
+                </div>
             </div>
             <div class="skill">
                 <span>Batch Script</span>
-                <div class="skill-bar"><div class="skill-fill" data-percent="39%" style="background-color: #89a5f3;"></div></div>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-percent="12%" style="background-color: #89a5f3;"></div>
+                </div>
             </div>
             <div class="skill">
                 <span>C/C++</span>
-                <div class="skill-bar"><div class="skill-fill" data-percent="16%" style="background-color: #f29111;"></div></div>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-percent="9%" style="background-color: #f29111;"></div>
+                </div>
             </div>
         </section>
-
-        <!-- Contact -->
         <section class="contact-section" id="contact">
             <h2>Contact Me</h2>
-            <p>Pham Long <strong>phamlongsoftware@gmail.com</strong></p>
+            <p>Pham Long<strong> phamlongsoftware@gmail.com</strong>.</p>
         </section>
     </main>
-
-    <footer class="footer">
-        <p><strong>Developed by @plongdev_</strong></p>
-        <p>© 2025 TeamOne Developer. All rights reserved.</p>
-    </footer>
-
+	<footer class="footer">
+    <p><strong>Developed by @plongdev_</strong></p>
+    <p>© 
+2025 TeamOne Developer. All rights reserved.</p>
+</footer>
     <script src="main.js"></script>
     <script src="app.js"></script>
 </body>
+
+</html> 
+ChatGPT đã nói:
+Trang mà bạn thấy trong ảnh (“Đang xác minh bạn là người…”) không phải là đoạn code HTML bạn tự viết mà là một lớp bảo vệ tự động của Cloudflare — gọi là Turnstile / Bot Protection.
+👉 Bạn không cần tự code lại từ đầu, mà chỉ cần thêm mã nhúng Turnstile của Cloudflare vào trang web của bạn.
+
+🧰 Cách thêm Cloudflare Turnstile vào web của bạn
+1. Tạo site key và secret key
+Vào: https://dash.cloudflare.com/turnstile
+
+Nhấn “Add site”, điền:
+
+Domain: tên miền web của bạn (ví dụ: plongdevs.github.io)
+
+Widget mode: Managed
+
+Sau khi tạo, bạn sẽ có:
+
+✅ Site key
+
+🔐 Secret key
+
+2. Thêm mã Turnstile vào trang HTML
+Thêm đoạn này trong thẻ <head> (trước khi đóng </head>):
+
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+3. Chèn widget xác minh vào <body>
+Ví dụ bạn muốn xác minh khi người dùng vào trang chủ, thì thêm đoạn này ngay sau thẻ <body> hoặc trước phần nội dung chính:
+
+<div class="cf-turnstile" 
+     data-sitekey="YOUR_SITE_KEY" 
+     data-theme="dark">
+</div>
+👉 Thay YOUR_SITE_KEY bằng site key bạn lấy ở bước 1.
+
+4. (Tuỳ chọn) Chặn tải trang nếu chưa xác minh
+Nếu bạn muốn giống trang “đang xác minh” của Cloudflare, bạn có thể ẩn toàn bộ nội dung và chỉ hiện ra sau khi người dùng vượt qua xác minh:
+
+<style>
+  #main-content { display: none; }
+</style>
+
+<div class="cf-turnstile" data-sitekey="YOUR_SITE_KEY" data-callback="onTurnstilePassed"></div>
+
+<div id="main-content">
+  <!-- Toàn bộ code web của bạn ở đây -->
+</div>
+
+<script>
+  function onTurnstilePassed(token) {
+    document.getElementById("main-content").style.display = "block";
+  }
+</script>
+5. Lưu ý:
+Turnstile chỉ hoạt động hoàn hảo khi bạn deploy web bằng domain thực hoặc GitHub Pages.
+
+Không nên để nội dung trang hiển thị trước khi xác minh nếu bạn muốn ngăn bot.
+
+Bạn có muốn mình viết full code hoàn chỉnh có Turnstile chèn sẵn vào web bạn vừa gửi không? (mình có thể chỉnh luôn phần <body> để hiện đúng như trang xác minh bạn thấy). ✅
+
+Bạn đã nói:
+ChatGPT đã nói:
+Cảm ơn bạn đã gửi ảnh 📸
+
+👉 Trong ảnh là phần DNS của Cloudflare cho domain plongdevs.github.io.
+Tuy nhiên, bạn không thể dùng trực tiếp *.github.io với Cloudflare proxy (màu cam) vì:
+
+github.io không phải domain bạn sở hữu.
+
+Cloudflare chỉ hoạt động đúng khi bạn thêm một tên miền riêng của bạn (ví dụ plongdevs.is-a.dev) rồi trỏ CNAME về GitHub Pages.
+
+Nếu bạn cố bật proxy với github.io → sẽ có lỗi SSL: “This hostname is not covered by a certificate” như trong ảnh.
+
+✅ Cách đúng để dùng Cloudflare + Turnstile với GitHub Pages
+1. Đăng ký một tên miền miễn phí
+Ví dụ dùng is-a.dev → https://is-a.dev
+Hoặc bạn cũng có thể mua một tên miền .com / .xyz giá rẻ.
+
+2. Thêm tên miền vào Cloudflare
+Vào Cloudflare → Add a site
+
+Dán tên miền bạn vừa đăng ký (VD: plongdevs.is-a.dev)
+
+Hoàn tất các bước thiết lập DNS.
+
+3. Trỏ tên miền về GitHub Pages
+Thêm record:
+
+Type: CNAME
+Name: @
+Target: plongdevs.github.io
+Proxy: OFF (xám)
+Nếu muốn bật proxy sau đó thì thêm SSL/TLS certificate thông qua Cloudflare.
+
+4. Vào GitHub → Settings → Pages
+Trong “Custom domain”, nhập tên miền mới (VD: plongdevs.is-a.dev)
+
+Tick “Enforce HTTPS” ✅
+
+5. Bây giờ bạn có thể:
+Dùng Cloudflare Turnstile bảo vệ web ✅
+
+Bật proxy Cloudflare và chống DDoS ✅
+
+Có chứng chỉ HTTPS miễn phí ✅
+
+👉 Tóm lại:
+Bạn không nên dùng plongdevs.github.io trực tiếp với Cloudflare proxy.
+→ Hãy tạo một tên miền riêng (miễn phí hoặc rẻ), trỏ CNAME về GitHub Pages → sau đó Cloudflare sẽ hoạt động đúng và bạn thêm Turnstile dễ dàng.
+
+Nếu bạn muốn mình làm mẫu chi tiết với tên miền miễn phí is-a.dev thì mình có thể hướng dẫn từng bước (cực dễ). Bạn có muốn mình hướng dẫn theo cách này không? 🛠️✨
+
+Bạn đã nói:
+Ko dùng github đc hả
+ChatGPT đã nói:
+👉 Dùng GitHub để host web thì vẫn được, nhưng:
+
+❌ Bạn không thể dùng Cloudflare proxy trực tiếp cho domain kiểu:
+
+plongdevs.github.io
+👉 Vì:
+
+github.io là tên miền của GitHub, không phải của bạn.
+
+Cloudflare chỉ cho phép bật proxy (để Turnstile / bảo mật hoạt động đầy đủ) với domain bạn sở hữu hoặc quản lý DNS.
+
+✅ Tuy nhiên, bạn vẫn có 2 cách hợp lệ để làm:
+
+🅰️ Cách 1: Dùng GitHub Pages + Domain riêng (Khuyên dùng) ✅
+Ví dụ bạn có domain miễn phí plongdevs.is-a.dev:
+
+Trỏ CNAME plongdevs.is-a.dev → plongdevs.github.io.
+
+Add domain vào Cloudflare.
+
+Bật proxy Cloudflare + Turnstile → hoạt động ngon lành.
+👉 Web vẫn chạy từ GitHub Pages, nhưng có bảo vệ Cloudflare.
+
+🅱️ Cách 2: Dùng Turnstile ở chế độ client-side (chỉ kiểm tra người dùng)
+Nếu bạn không có domain riêng, bạn vẫn có thể chèn Turnstile để xác minh người truy cập như sau:
+
+Thêm script Turnstile vào HTML (không cần Cloudflare DNS).
+
+Khi người dùng vào web plongdevs.github.io, widget sẽ hiện để xác minh bot/ người thật.
+
+Ví dụ:
+
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+<div class="cf-turnstile" 
+     data-sitekey="YOUR_SITE_KEY" 
+     data-callback="onVerify"></div>
+
+<div id="main" style="display:none">
+  <h1>Chào mừng bạn!</h1>
+  <!-- Nội dung web ở đây -->
+</div>
+
+<script>
+  function onVerify(token) {
+    document.getElementById('main').style.display = 'block';
+  }
+</script>
+⚠️ Nhưng cách này chỉ ẩn nội dung với người chưa xác minh, chứ không chặn bot hoàn toàn được (vì bạn không bật proxy bảo vệ được).
+
+👉 Tóm lại:
+
+✅ Muốn dùng Turnstile “xịn” → cần domain riêng.
+
+🟡 Không có domain riêng → vẫn dùng được Turnstile nhưng không bảo vệ toàn site.
+
+Nếu bạn muốn, mình có thể hướng dẫn bạn tạo domain miễn phí is-a.dev trong 5 phút ⏳ (không cần thẻ ngân hàng).
+👉 Bạn có muốn mình chỉ bạn cách này không? ✨
+
+Bạn đã nói:
+Vậy dùng hcaptcha haygooogle captcha đc ko
+ChatGPT đã nói:
+✅ Có nhé — bạn hoàn toàn có thể dùng cả:
+
+🧠 hCaptcha (dễ tích hợp, miễn phí, không cần xác minh danh tính quá phức tạp).
+
+🔐 reCAPTCHA (Google reCAPTCHA — phổ biến và dễ tìm tài liệu).
+
+Và quan trọng là cả 2 đều có thể hoạt động tốt trên GitHub Pages, vì chúng chỉ cần:
+
+Thêm một đoạn <script> vào HTML,
+
+Chèn một thẻ <div> chứa widget captcha,
+
+Và xử lý xác thực bằng cách gửi token đến server hoặc dùng chế độ “client-side only” (tùy bạn muốn bảo mật ở mức nào).
+
+👉 Nếu bạn không có server riêng, thì nên dùng hCaptcha dạng “passive” hoặc “invisible” — dễ dùng cho web tĩnh.
+
+Bạn muốn tôi hướng dẫn tích hợp hCaptcha hay Google reCAPTCHA vào web GitHub Pages của bạn? (Mình khuyên hCaptcha vì dễ đăng ký hơn.) 🛡️✨
+
+Bạn đã nói:
+Gửi full code đi
+ChatGPT đã nói:
+Dưới đây là full code HTML để tích hợp 🧠 hCaptcha vào một trang web tĩnh (như trên GitHub Pages) mà không cần server riêng 👇
+
+⚠️ Sau khi copy code này, bạn chỉ cần đăng ký tài khoản trên https://www.hcaptcha.com → tạo “Site Key” → dán vào data-sitekey="YOUR_SITE_KEY".
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo hCaptcha</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    form {
+      background: #1e1e1e;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      width: 300px;
+    }
+    button {
+      background: #4CAF50;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    button:hover {
+      background: #45a049;
+    }
+  </style>
+  <!-- Script hCaptcha -->
+  <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+</head>
+<body>
+
+  <form id="myForm" onsubmit="return handleSubmit(event)">
+    <h2>Đăng nhập bảo mật</h2>
+    <input type="text" placeholder="Tên người dùng" required><br><br>
+    <input type="password" placeholder="Mật khẩu" required><br><br>
+
+    <!-- HCaptcha widget -->
+    <div class="h-captcha" data-sitekey="YOUR_SITE_KEY"></div>
+
+    <button type="submit">Gửi</button>
+  </form>
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      const response = hcaptcha.getResponse();
+      if (!response) {
+        alert("⚠️ Vui lòng xác nhận captcha trước khi gửi!");
+        return false;
+      }
+      // Ở đây bạn có thể xử lý form hoặc gửi dữ liệu đi
+      alert("✅ Xác nhận thành công!");
+      return true;
+    }
+  </script>
+
+</body>
+</html>
+📌 Hướng dẫn dùng:
+
+Tạo 1 file tên index.html trong repo GitHub Pages của bạn.
+
+Dán đoạn code trên vào.
+
+Thay YOUR_SITE_KEY bằng site key thật từ hCaptcha.
+
+Commit & push lên → truy cập web → test ✅
+
+Nếu bạn muốn mình gửi bản tương tự nhưng dùng 🟡 reCAPTCHA của Google thì mình có thể gửi tiếp. Bạn muốn không? 🚀
+
+Bạn đã nói:
+Bạn nghĩ web của tôi nên thêm cái gì hay ho ko web của tôi dùng để chứa các file,tool,code 
+ChatGPT đã nói:
+Ý tưởng hay đó 🔥
+Nếu web của bạn dùng để chứa file, tool, code (kiểu như kho tài nguyên cá nhân / Dev Hub), mình gợi ý bạn thêm những tính năng “xịn” này để nó chuyên nghiệp, dễ dùng và đẹp mắt hơn 👇
+
+🧭 1. Thanh điều hướng & Menu gọn gàng
+Giúp truy cập nhanh các mục như: Tool, Code, File, Liên hệ, Tài liệu.
+
+👉 Dùng thanh menu cố định trên đầu (sticky header).
+
+<header>
+  <nav>
+    <a href="#home">Trang chủ</a>
+    <a href="#tools">Tool</a>
+    <a href="#code">Code</a>
+    <a href="#files">File</a>
+    <a href="#about">Giới thiệu</a>
+  </nav>
+</header>
+🧰 2. Bảng danh sách tool/code có tìm kiếm 🔍
+Nếu bạn chứa nhiều file, nên có ô tìm kiếm hoặc bộ lọc để người dùng dễ tìm hơn.
+
+👉 Ví dụ: danh sách được load từ file JSON hoặc Markdown (GitHub Pages hỗ trợ tốt).
+👉 Có thể thêm nút “Copy Link” để người khác tải nhanh.
+
+🌙 3. Chế độ Dark / Light mode
+Đa số Dev đều thích dark mode 😎 — bạn có thể thêm nút chuyển chế độ.
+
+📊 4. Tự động hiển thị thông tin file
+Dung lượng file 📦
+
+Ngày cập nhật 🕒
+
+Mô tả ngắn 📄
+→ Dễ quản lý & chuyên nghiệp hơn thay vì chỉ là một list link trần.
+
+🧑‍💻 5. Hiệu ứng UI nhẹ — không nặng web
+Hiệu ứng hover cho nút
+
+Loading animation đơn giản
+
+Font icon đẹp (dùng Font Awesome)
+
+Thêm background động nhẹ (particle, code rain, …)
+
+🔐 6. Captcha hoặc mật khẩu nhẹ (nếu cần riêng tư)
+Bạn đã nói ở trên rồi — có thể dùng hCaptcha để tránh bot tải hàng loạt.
+
+📈 7. Thống kê lượt tải / truy cập
+Bạn có thể:
+
+Gắn Plausible Analytics (miễn phí, nhẹ hơn Google Analytics)
+
+Hoặc tạo bộ đếm lượt tải bằng JS/JSON đơn giản
+
+🧭 8. Tạo trang index thân thiện
+Khi người khác vào trang chủ, họ thấy:
+
+Banner / lời chào
+
+Các mục nổi bật
+
+Link nhanh đến các Tool quan trọng
+→ Không cần mò đường dẫn.
+
+🧠 9. SEO nhẹ + favicon
+Thêm meta tags cơ bản để web hiển thị đẹp trên mạng xã hội
+
+Thêm logo hoặc icon riêng
+
+⚡ 10. Nút Copy Link / Copy Code nhanh
+Nếu bạn chia sẻ code → thêm nút copy nhanh thì siêu tiện.
+
+👉 Ví dụ:
+
+<button onclick="copyText()">📋 Copy Code</button>
+<script>
+function copyText() {
+  navigator.clipboard.writeText("console.log('Hello');");
+  alert("Đã copy!");
+}
+</script>
+Nếu bạn muốn, mình có thể code sẵn một giao diện khung (UI Template) đẹp, có sẵn menu + dark mode + phần chứa tool/code luôn 🚀
+👉 Bạn có muốn mình gửi full template HTML/CSS/JS nhẹ cho trang của bạn không? (không cần backend, chạy tốt trên GitHub Pages) 🌐✨
+
+Bạn đã nói:
+Tôi muốn 4 và 7 
+Để tôi gửi nốt js và css
+Main.js
+
+// CONFIGURATION & DATA
+
+const TYPING_CONFIG = {
+    texts: ["Seller.", "Designer.", "Developer."],
+    typingSpeed: 100,
+    deletingSpeed: 50,
+    pauseBeforeDeleting: 2000
+};
+
+const SOCIALS = [
+    {
+        name: 'facebook',
+        url: 'https://www.facebook.com/profile.php?id=61578035895912#'
+    },
+    {
+        name: 'tiktok',
+        url: 'https://tiktok.com/@teamone25k'
+    },
+    {
+        name: 'telegram',
+        url: 'https://t.me/playping01'
+    },
+    {
+        name: 'zalo',
+        url: 'https://zalo.me/0936384089'
+    }
+];
+
+// TYPING ANIMATION STATE
+
+let textIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+// UTILITY FUNCTIONS
+
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// TYPING ANIMATION
+
+function typeText() {
+    const currentText = TYPING_CONFIG.texts[textIndex];
+    const typedTextElement = document.getElementById("typed-text");
+    
+    if (!isDeleting && charIndex < currentText.length) {
+        typedTextElement.innerHTML = currentText.substring(0, charIndex + 1);
+        charIndex++;
+        setTimeout(typeText, TYPING_CONFIG.typingSpeed);
+    } else if (isDeleting && charIndex > 0) {
+        typedTextElement.innerHTML = currentText.substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(typeText, TYPING_CONFIG.deletingSpeed);
+    } else if (!isDeleting && charIndex === currentText.length) {
+        isDeleting = true;
+        setTimeout(typeText, TYPING_CONFIG.pauseBeforeDeleting);
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        textIndex = (textIndex + 1) % TYPING_CONFIG.texts.length;
+        setTimeout(typeText, TYPING_CONFIG.typingSpeed);
+    }
+}
+
+// SKILL BARS ANIMATION
+
+function animateSkillBars() {
+    const skillBars = document.querySelectorAll('.skill-fill');
+    
+    skillBars.forEach(bar => {
+        const percent = bar.getAttribute('data-percent');
+        bar.style.width = percent;
+    });
+}
+
+function handleSkillsAnimation() {
+    const skillSection = document.querySelector('.skills-section');
+    if (isInViewport(skillSection)) {
+        animateSkillBars();
+        window.removeEventListener('scroll', handleSkillsAnimation);
+    }
+}
+
+// NAVIGATION MENU
+
+function initializeMenuToggle() {
+    const menuButton = document.getElementById('menu-button');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (menuButton && navLinks) {
+        menuButton.addEventListener('click', function() {
+            navLinks.classList.toggle('show');
+            navLinks.classList.toggle('box-shadow');
+        });
+    }
+}
+
+// SOCIAL BUTTONS
+
+function createSocialButtons() {
+    const socialButtonContainer = document.querySelector('.social-buttons');
+    
+    if (!socialButtonContainer) return;
+    
+    SOCIALS.forEach(social => {
+        const button = document.createElement('button');
+        button.classList.add('social-btn', 'box-shadow');
+        button.innerHTML = <img src="img/logo/${social.name}.png" class="logo" alt="${social.name}"/>;
+        button.addEventListener('click', () => {
+            window.open(social.url, '_blank');
+        });
+        socialButtonContainer.appendChild(button);
+    });
+}
+
+// DARK MODE TOGGLE
+
+function initializeDarkModeToggle() {
+    const colorModeButton = document.querySelector('#colorMode, .color-mode, [data-color-mode]');
+    
+    if (!colorModeButton) return;
+    
+    colorModeButton.addEventListener('click', toggleDarkMode);
+}
+
+function toggleDarkMode() {
+    const elements = {
+        body: document.body,
+        skillsSection: document.querySelector('.skills-section'),
+        wave1: document.querySelector('#wave1'),
+        wave2: document.querySelector('#wave2'),
+        svg1: document.querySelector('.svg1'),
+        svg2: document.querySelector('.svg2')
+    };
+    
+    const currentDarkMode = document.body.style.getPropertyValue("--dark-mode") - 0;
+    const isDarkMode = Boolean(currentDarkMode);
+    
+    elements.body.style.setProperty("--dark-mode", 1 - currentDarkMode);
+    
+    elements.body.style.color = isDarkMode ? 'black' : 'white';
+    elements.body.style.background = isDarkMode 
+        ? 'linear-gradient(0deg, #94bbff, #fff)' 
+        : 'linear-gradient(0deg, #777272, #000)';
+    
+    if (elements.skillsSection) {
+        elements.skillsSection.style.backgroundColor = isDarkMode ? 'white' : 'black';
+    }
+    
+    if (elements.svg1) {
+        elements.svg1.style.fill = isDarkMode ? 'white' : 'black';
+    }
+    
+    if (elements.wave2) {
+        elements.wave2.style.backgroundColor = isDarkMode ? 'white' : 'black';
+    }
+    
+    if (elements.svg2) {
+        elements.svg2.style.fill = isDarkMode ? '#f4f4f4' : 'black';
+    }
+}
+
+// ENTRANCE ANIMATION
+
+function playEntranceAnimation() {
+    const enterElement = document.querySelector('.enter');
+    if (!enterElement) return;
+    
+    for (let i = 20; i >= 0; i--) {
+        setTimeout(() => {
+            const blurValue = blur(${i}px);
+            enterElement.style.backdropFilter = blurValue;
+            enterElement.style.WebkitBackdropFilter = blurValue;
+        }, 40 * (20 - i));
+    }
+}
+
+// INITIALIZATION
+
+function initializeApp() {
+    initializeMenuToggle();
+    createSocialButtons();
+    initializeDarkModeToggle();
+    playEntranceAnimation();
+    
+    
+typeText();
+    handleSkillsAnimation();
+    
+    window.addEventListener('scroll', handleSkillsAnimation);
+}
+
+// EVENT LISTENERS
+
+document.addEventListener('DOMContentLoaded', initializeApp);
+App.js
+// APP DATA CONFIGURATION
+
+const apps = [
+    {
+        name: 'FakeLag Reborn ✅ ',
+        url: 'https://drive.google.com/file/d/19HLe6X61w-V3z3FvWYHv4sO2XpOOrrVA/view?usp=drivesdk',
+        img: './img/appicons/fạkelag reborn.jpg',
+        descriptions: 'Hack FakeLag chống band vv'
+    },
+    {
+        name: 'PlayPing ✅',
+        url: 'https://www.mediafire.com/file/80vwmrhzly94e10/PlayPing+No+Update.apk/file',
+        img: './img/appicons/playping.jpg',
+        descriptions: 'Playping No update by ©PLong X Nguyễn Tiêu'
+    },
+    {
+        name: 'Netwing',
+        url: 'https://www.mediafire.com/file/h9xc4z01xj0fwxp/Netwing+0.11.0B.F2++.apk/file',
+        img: './img/appicons/netwing.jpg',
+        descriptions: 'Hack FakeLag Anti thấp ko nên tải'
+    },
+    {
+        name: 'FayFayConfig ✅',
+        url: 'https://www.mediafire.com/file/w691w2cg0u5mrtq/FayFay+Config+2.0.6.apk/file',
+        img: './img/appicons/fayfayconfig.jpg',
+        descriptions: 'PlayPing bản cũ chống ban anti 100%'
+    },
+];
+
+const ksignApps = [
+    {
+        name: 'DATA Bom Keo mini Antiband ✅',
+        url: 'https://www.mediafire.com/file/7szp1su417oq3iz/Keo+Mini.zip/file',
+        img: 'img/pf/zip.png',
+        descriptions: 'Áp dụng cho keo TCXH,STXH'   
+    },
+    {
+        name: 'DATA Xe bay đảo thế kỉ✅',
+        url: 'https://www.mediafire.com/file/lrplx2guoies3ns/xe+bay+đảo+thế+kỉ.zip/file',
+        img: 'img/pf/zip.png',
+        descriptions: 'Dùng để tank bo cho ae antiband 100%'   
+    },
+    {
+        name: 'DATA Tử chiến xuyên lòng đất đảo thế kỉ ✅',
+        url: 'https://www.mediafire.com/file/2faijugnfaqvobm/Tử+chiến+xuyên+lòng+đất.zip/file',
+        img: 'img/pf/zip.png',
+        descriptions: 'Nhớ bật orion khi xuống...'
+	}
+];
+
+// UI COMPONENTS
+
+const cloudIcon = 
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+     class="lucide lucide-download">
+  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+  <polyline points="7 10 12 15 17 10"/>
+  <line x1="12" y1="15" x2="12" y2="3"/>
+</svg>;
+
+
+
+
+// DOM ELEMENTS
+
+const appContainer = document.querySelector('.app-section');
+const ksignContainer = document.querySelector('.ksign-section');
+const esignContainer = document.querySelector('.esign-section');
+
+// UTILITY FUNCTIONS
+
+function render(name, url, img, description) {
+    return <div class="app-container">
+        <div class="app">
+            <img src="${img}" class="app-img box-shadow" alt="${name}">
+            <h1 style="margin-left: 1em">${name}<br>
+                <p>${description}</p>
+            </h1>
+        </div>
+        <a href="${url}" target="_blank" class="download-btn" style="color: #007aff; text-decoration: none;">
+            ${cloudIcon}
+        </a>
+    </div>;
+}
+
+
+function addClickHandler(container) {
+    if (!container) return;
+    
+    container.addEventListener('click', (event) => {
+        const target = event.target.closest('.app-container');
+        if (target) {
+            const url = target.querySelector('.download-btn').getAttribute('href');
+            window.open(url, '_blank');
+        }
+    });
+}
+
+// INITIALIZATION
+
+// Render apps in their respective containers
+if (appContainer) {
+    apps.forEach(app => {
+        appContainer.innerHTML += render(app.name, app.url, app.img, app.descriptions);
+    });
+}
+
+if (ksignContainer) {
+    ksignApps.forEach(ksign => {
+        ksignContainer.innerHTML += render(ksign.name, ksign.url, ksign.img, ksign.descriptions);
+    });
+}
+
+if (esignContainer) {
+    esignApps.forEach(esign => {
+        esignContainer.innerHTML += render(esign.name, esign.url, esign.img, esign.descriptions);
+    });
+}
+
+// Add click han
+dlers to all containers
+addClickHandler(appContainer);
+addClickHandler(ksignContainer);
+addClickHandler(esignContainer);
+ChatGPT đã nói:
+Rất tốt 👌
+Với code JS bạn đã gửi, mình sẽ thêm cho bạn 2 tính năng bạn muốn:
+
+✅ Tự động hiển thị thông tin file (dung lượng, ngày cập nhật — mục 4)
+
+📈 Thống kê lượt tải (mục 7)
+
+👉 Mọi thứ sẽ dùng JS thuần (không cần server), nên vẫn chạy tốt trên GitHub Pages.
+
+📁 1. Thêm dữ liệu file (size + update)
+Trước tiên, mình chỉnh lại cấu trúc apps để thêm size (dung lượng) và updated (ngày cập nhật):
+
+const apps = [
+    {
+        name: 'FakeLag Reborn ✅ ',
+        url: 'https://drive.google.com/file/d/19HLe6X61w-V3z3FvWYHv4sO2XpOOrrVA/view?usp=drivesdk',
+        img: './img/appicons/fạkelag reborn.jpg',
+        descriptions: 'Hack FakeLag chống band vv',
+        size: '35 MB',
+        updated: '2025-10-01'
+    },
+    {
+        name: 'PlayPing ✅',
+        url: 'https://www.mediafire.com/file/80vwmrhzly94e10/PlayPing+No+Update.apk/file',
+        img: './img/appicons/playping.jpg',
+        descriptions: 'Playping No update by ©PLong X Nguyễn Tiêu',
+        size: '25 MB',
+        updated: '2025-09-28'
+    }
+];
+Bạn có thể tự thêm size và updated cho từng app còn lại.
+
+📊 2. Thêm bộ đếm lượt tải (local)
+Mình sẽ dùng localStorage để lưu lượt tải cho mỗi app, vì GitHub Pages không có server.
+Người tải càng nhiều → bộ đếm sẽ tăng ngay lập tức.
+
+function getDownloadCount(appName) {
+    const count = localStorage.getItem(`download_${appName}`);
+    return count ? parseInt(count) : 0;
+}
+
+function incrementDownloadCount(appName) {
+    const current = getDownloadCount(appName);
+    localStorage.setItem(`download_${appName}`, current + 1);
+}
+🧱 3. Render UI có dung lượng, ngày cập nhật và lượt tải
+Thay thế hàm render hiện tại trong App.js bằng đoạn này 👇
+
+function render(name, url, img, description, size = '', updated = '') {
+    const downloads = getDownloadCount(name);
+    return `<div class="app-container">
+        <div class="app">
+            <img src="${img}" class="app-img box-shadow" alt="${name}">
+            <div class="app-info">
+                <h1>${name}</h1>
+                <p>${description}</p>
+                <div class="file-meta">
+                    ${size ? `<span>📦 ${size}</span>` : ''}
+                    ${updated ? `<span>🕒 ${updated}</span>` : ''}
+                    <span>⬇️ ${downloads} lượt tải</span>
+                </div>
+            </div>
+        </div>
+        <a href="${url}" target="_blank" class="download-btn" onclick="incrementDownloadCount('${name}')">
+            ${cloudIcon}
+        </a>
+    </div>`;
+}
+🎨 4. CSS để hiển thị đẹp hơn
+Thêm phần này vào file style.css của bạn (hoặc file CSS chính):
+
+.app-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 10px;
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+.app-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.file-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.file-meta span {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 3px 8px;
+    border-radius: 6px;
+}
+✅ Kết quả sau khi thêm:
+
+Hiện dung lượng 📦
+
+Hiện ngày cập nhật 🕒
+
+Bộ đếm lượt tải tăng ngay sau khi click ⬇️
+
+Không cần backend — hoạt động tốt trên GitHub Pages
+
+👉 Nếu bạn muốn sau này reset hoặc lưu lượt tải thật (toàn cầu, không chỉ trên máy người dùng), mình có thể giúp bạn tích hợp miễn phí với một API đếm lượt tải đơn giản (dùng jsonbin.io hoặc Firebase).
+
+Bạn có muốn mình làm luôn bản có đếm lượt tải thật (online) không, thay vì chỉ lưu localStorage? 📡✨
+
+Bạn đã nói:
+Full code
+ChatGPT đã nói:
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+  <title>PLongDev</title>
+  <style>
+    :root{
+      --bg:#0b0b0b;
+      --card:#1a1a1a;
+      --muted:rgba(255,255,255,0.7);
+      --accent:#007aff;
+    }
+    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;}
+    body{background:linear-gradient(0deg,#777272,#000);color:#fff;--dark-mode:1;}
+    .enter{position:fixed;inset:0;background:rgba(0,0,0,0.6);backdrop-filter:blur(0px);z-index:9999;pointer-events:none;}
+    header{position:sticky;top:0;background:transparent;z-index:50}
+    .navbar{display:flex;justify-content:space-between;align-items:center;padding:10px 16px}
+    .nav-links{display:flex;gap:12px;list-style:none;padding:0;margin:0;align-items:center}
+    .nav-links a{color:var(--muted);text-decoration:none}
+    .menu-button{display:none;cursor:pointer}
+    .profile{display:flex;flex-direction:column;align-items:center;padding:40px 16px}
+    .profile-pic{width:120px;height:120px;border-radius:999px;object-fit:cover;border:4px solid rgba(255,255,255,0.06)}
+    .typing{font-size:18px;color:var(--muted)}
+    .social-buttons{display:flex;gap:10px;margin-top:12px}
+    .social-btn{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px;border-radius:8px;cursor:pointer}
+    .box-shadow{box-shadow:0 6px 18px rgba(0,0,0,0.5)}
+    .projects-section,.skills-section,.contact-section{padding:28px 16px;max-width:980px;margin:0 auto}
+    .app-section,.ksign-section,.esign-section{padding:16px;max-width:980px;margin:0 auto}
+    .app-container{display:flex;justify-content:space-between;align-items:center;background:var(--card);border-radius:12px;padding:12px;margin-bottom:12px;color:#fff}
+    .app{display:flex;align-items:center;gap:12px}
+    .app-img{width:64px;height:64px;border-radius:8px;object-fit:cover}
+    .app-info{display:flex;flex-direction:column}
+    .app-info h1{font-size:16px;margin:0}
+    .app-info p{margin:6px 0 0 0;color:var(--muted);font-size:14px}
+    .file-meta{display:flex;flex-wrap:wrap;gap:8px;font-size:13px;margin-top:8px}
+    .file-meta span{background:rgba(255,255,255,0.04);padding:4px 8px;border-radius:8px;color:var(--muted)}
+    .download-btn{display:flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:10px;background:transparent;border:none;cursor:pointer}
+    footer.footer{text-align:center;padding:24px 16px;color:var(--muted);margin-top:40px}
+    @media(max-width:720px){
+      .nav-links{display:none}
+      .menu-button{display:block}
+      .app-container{flex-direction:column;align-items:flex-start;gap:10px}
+      .download-btn{align-self:flex-end}
+    }
+    .search-bar{max-width:980px;margin:8px auto 18px;padding:0 16px;display:flex;gap:8px}
+    .search-bar input{flex:1;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:#fff}
+    .search-bar select{padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:#fff}
+    .stats-line{display:flex;gap:12px;align-items:center;color:var(--muted);margin-bottom:12px}
+    .small-btn{padding:6px 10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--muted);cursor:pointer}
+  </style>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-cpp.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-java.min.js"></script>
+</head>
+<body>
+  <div class="enter"></div>
+  <header>
+    <nav class="navbar box-shadow">
+      <div class="th"></div>
+      <ul class="nav-links">
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">My Stuffs</a></li>
+        <li><a href="#app">Application</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li style="display:flex;width:26px;">
+          <svg class="color-mode" height="30" id="colorMode" viewbox="0 0 400 400" width="30">
+            <circle cx="200" cy="200" fill="white" r="195" stroke="#000" stroke-width="10"></circle>
+            <path d="M 200 375 A 175 175 0 0 1 200 25"></path>
+            <path d="M 200 300 A 100 100 0 0 1 200 100" fill="#FFF"></path>
+            <path d="M 200 100 A 100 100 180 0 1 200 300"></path>
+          </svg>
+        </li>
+      </ul>
+      <div class="menu-button" id="menu-button">☰</div>
+    </nav>
+  </header>
+  <main>
+    <section class="about-section" id="about">
+      <div class="padding profile">
+        <img alt="Profile Picture" class="profile-pic box-shadow" src="./img/pf/profile-pic.png" />
+        <h2 style="margin-bottom:0;">Hi, this is</h2>
+        <h1 style="margin-top:0;">Pham Long <img alt="" src="./img/icons/badge.png" style="height:28px;" /></h1>
+        <div class="typing">and I'm a <span id="typed-text"></span><span class="cursor">|</span></div>
+        <br /><br />
+        <p>Nếu bạn muốn mua Key AuroraVn giá rẻ thì hãy ib ở bên dưới</p>
+        <div class="social-buttons"></div>
+      </div>
+    </section>
+
+    <section class="projects-section" id="projects">
+      <div class="prj-collum">
+        <h2></h2>
+        <div class="project"><h3>Telegram Channel Notification</h3><a href="https://t.me/playping01" target="_blank"><img alt="" src="./img/icons/redirect.png" /></a></div>
+        <div class="project"><h3>Box Chat Zalo</h3><a href="https://zalo.me/g/vruic971" target="_blank"><img alt="" src="./img/icons/redirect.png" /></a></div>
+        <div class="project"><h3>Box Chat Messenger</h3><a href="https://m.me/j/Abb7x2Ql4c0-_b_r/" target="_blank"><img alt="Discord" src="./img/icons/redirect.png" /></a></div>
+      </div>
+    </section>
+
+    <h2 id="app" style="text-align:center;">Cheat App</h2>
+    <div class="search-bar">
+      <input id="searchInput" placeholder="Tìm app hoặc file..." />
+      <select id="sortSelect">
+        <option value="recent">Sắp xếp: Mới nhất</option>
+        <option value="downloads">Sắp xếp: Nhiều tải</option>
+        <option value="size">Sắp xếp: Kích thước</option>
+      </select>
+      <button class="small-btn" id="resetCounts">Reset lượt tải</button>
+    </div>
+    <section class="app-section"></section>
+
+    <div class="line"></div>
+    <h2 style="text-align:center;margin-top:5em;">Data</h2>
+    <br />
+    <div class="ksign-section"></div>
+    <div class="line"></div>
+    <br />
+    <div class="esign-section"></div>
+
+    <div class="wave-container" id="wave1">
+      <svg viewbox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+        <path class="svg1" d="M0,288L48,272C96,256,192,224,288,213.3C384,203,480,213,576,213.3C672,213,768,203,864,192C960,181,1056,171,1152,165.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" fill="#fff" fill-opacity="1"></path>
+      </svg>
+    </div>
+
+    <section class="skills-section" id="skills">
+      <h2>Programming Language Skills</h2>
+      <div class="skill">
+        <span>HTML/CSS/JS</span>
+        <div class="skill-bar">
+          <div class="skill-fill" data-percent="76%" style="background-color:#e34c26;width:0;"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <span>Python</span>
+        <div class="skill-bar">
+          <div class="skill-fill" data-percent="68%" style="background-color:#1f5af9;width:0;"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <span>Batch Script</span>
+        <div class="skill-bar">
+          <div class="skill-fill" data-percent="12%" style="background-color:#89a5f3;width:0;"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <span>C/C++</span>
+        <div class="skill-bar">
+          <div class="skill-fill" data-percent="9%" style="background-color:#f29111;width:0;"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <h2>Contact Me</h2>
+      <p>Pham Long <strong>phamlongsoftware@gmail.com</strong>.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p><strong>Developed by @plongdev_</strong></p>
+    <p>© 2025 TeamOne Developer. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const TYPING_CONFIG={texts:["Seller.","Designer.","Developer."],typingSpeed:100,deletingSpeed:50,pauseBeforeDeleting:2000};
+    const SOCIALS=[{name:'facebook',url:'https://www.facebook.com/profile.php?id=61578035895912#'},{name:'tiktok',url:'https://tiktok.com/@teamone25k'},{name:'telegram',url:'https://t.me/playping01'},{name:'zalo',url:'https://zalo.me/0936384089'}];
+    let textIndex=0,charIndex=0,isDeleting=false;
+    function isInViewport(element){const rect=element.getBoundingClientRect();return(rect.top>=0&&rect.left>=0&&rect.bottom<=(window.innerHeight||document.documentElement.clientHeight)&&rect.right<=(window.innerWidth||document.documentElement.clientWidth));}
+    function typeText(){const currentText=TYPING_CONFIG.texts[textIndex];const typedTextElement=document.getElementById("typed-text");if(!isDeleting&&charIndex<currentText.length){typedTextElement.innerHTML=currentText.substring(0,charIndex+1);charIndex++;setTimeout(typeText,TYPING_CONFIG.typingSpeed);}else if(isDeleting&&charIndex>0){typedTextElement.innerHTML=currentText.substring(0,charIndex-1);charIndex--;setTimeout(typeText,TYPING_CONFIG.deletingSpeed);}else if(!isDeleting&&charIndex===currentText.length){isDeleting=true;setTimeout(typeText,TYPING_CONFIG.pauseBeforeDeleting);}else if(isDeleting&&charIndex===0){isDeleting=false;textIndex=(textIndex+1)%TYPING_CONFIG.texts.length;setTimeout(typeText,TYPING_CONFIG.typingSpeed);} }
+    function animateSkillBars(){const skillBars=document.querySelectorAll('.skill-fill');skillBars.forEach(bar=>{const percent=bar.getAttribute('data-percent');bar.style.width=percent;});}
+    function handleSkillsAnimation(){const skillSection=document.querySelector('.skills-section');if(isInViewport(skillSection)){animateSkillBars();window.removeEventListener('scroll',handleSkillsAnimation);}}
+    function initializeMenuToggle(){const menuButton=document.getElementById('menu-button');const navLinks=document.querySelector('.nav-links');if(menuButton&&navLinks){menuButton.addEventListener('click',function(){navLinks.classList.toggle('show');navLinks.classList.toggle('box-shadow');});}}
+    function createSocialButtons(){const socialButtonContainer=document.querySelector('.social-buttons');if(!socialButtonContainer) return;SOCIALS.forEach(social=>{const button=document.createElement('button');button.classList.add('social-btn','box-shadow');button.innerHTML=`<img src="img/logo/${social.name}.png" class="logo" alt="${social.name}"/>`;button.addEventListener('click',()=>{window.open(social.url,'_blank');});socialButtonContainer.appendChild(button);});}
+    function initializeDarkModeToggle(){const colorModeButton=document.querySelector('#colorMode, .color-mode, [data-color-mode]');if(!colorModeButton) return;colorModeButton.addEventListener('click',toggleDarkMode);}
+    function toggleDarkMode(){const elements={body:document.body,skillsSection:document.querySelector('.skills-section'),wave1:document.querySelector('#wave1'),wave2:document.querySelector('#wave2'),svg1:document.querySelector('.svg1'),svg2:document.querySelector('.svg2')};const currentDarkMode=document.body.style.getPropertyValue("--dark-mode")-0;const isDarkMode=Boolean(currentDarkMode);elements.body.style.setProperty("--dark-mode",1-currentDarkMode);elements.body.style.color=isDarkMode?'black':'white';elements.body.style.background=isDarkMode?'linear-gradient(0deg,#94bbff,#fff)':'linear-gradient(0deg,#777272,#000)';if(elements.skillsSection){elements.skillsSection.style.backgroundColor=isDarkMode?'white':'black'}if(elements.svg1){elements.svg1.style.fill=isDark
+Bạn đã nói:
+Nói chung để thêm lượt tải ngày cập nhật và size file thì tôi cần gửi gì cho bạn để bạn thêm
+ChatGPT đã nói:
+Câu hỏi hay 👌
+
+Nếu bạn muốn tôi thêm tính năng hiển thị như:
+
+📅 Ngày cập nhật file
+
+📦 Dung lượng file
+
+⬇️ Số lượt tải
+
+… thì bạn chỉ cần gửi cho tôi mấy thông tin sau:
+
+📁 File HTML hiện tại của trang (đặc biệt là phần hiển thị các file/tool).
+
+📜 Nếu bạn có, thì gửi luôn file CSS/JS bạn đang dùng (nếu không có cũng không sao — tôi sẽ viết phần mới).
+
+🧾 Một danh sách file bạn muốn hiển thị thông tin, ví dụ:
+
+Tên file: tool1.zip
+Ngày cập nhật: 09/10/2025
+Dung lượng: 2.3 MB
+Lượt tải: 120
+Link tải: https://...
+Tôi sẽ trả lại cho bạn ✅ full code HTML + CSS + JS để tự động hiện mấy thông tin này theo giao diện đẹp (có thể thêm hiệu ứng nhẹ nếu bạn thích).
+
+👉 Bạn có muốn tôi làm giao diện theo kiểu bảng (table) hay thẻ (card) cho mỗi file? (card nhìn sẽ đẹp và hiện đại hơn table) 📊🪄
+
+Bạn đã nói:
+Có file
+index.html
+main.js
+app.js
+styles.css
+app.css
+ChatGPT đã nói:
+Tốt lắm 👌
+Vậy để mình có thể thêm “ngày cập nhật – dung lượng – lượt tải” vào giao diện web của bạn, bạn chỉ cần gửi:
+
+📄 index.html → để mình biết chỗ nào sẽ hiển thị thông tin file.
+
+📜 main.js và app.js → để mình chèn code xử lý dữ liệu tải về và tăng lượt tải.
+
+🎨 styles.css và app.css → để mình chỉnh lại giao diện đẹp, gọn gàng.
+
+👉 Sau khi có các file này, mình sẽ trả lại cho bạn một phiên bản đầy đủ, trong đó mỗi file trên web sẽ có:
+
+📅 Ngày cập nhật
+
+📦 Dung lượng
+
+⬇️ Lượt tải (có thể tăng mỗi khi người dùng bấm tải)
+
+⚡ Thậm chí mình có thể thêm hiệu ứng “tăng lượt tải real time” nếu bạn muốn (JS thuần, không cần backend).
+
+📥 Gửi các file đó lên đây (hoặc ít nhất là index.html + 1 file JS bạn dùng để điều khiển tải) — mình sẽ làm full code cho bạn.
+
+Bạn đã nói:
+Tôi gửi từng cái một nhé
+index.html
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <title>PLongDev</title>
+    <link href="styles.css" rel="stylesheet" />
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css" rel="stylesheet" /> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-cpp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-java.min.js"></script>
+    <link href="app.css" rel="stylesheet" />
+    <link as="style"
+        href="https://ipa.chungchi365.com/_nuxt/iconfont-78cf5cacb1b8b5a62052065f527281e56b15ceae3f20ebdfd5fe0cfaebbd737c.Bc_iiR8Q.svg"
+        onload="this.rel='stylesheet'" rel="stylesheet" />
+    </link>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="enter"></div>
+    <header>
+        <nav class="navbar box-shadow">
+            <div class="th"></div>
+            <ul class="nav-links">
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">My Stuffs</a></li>
+                <li><a href="#app">Application</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li style="display: flex; width: 26px;">
+                    <svg class="color-mode" height="30" id="colorMode" viewbox="0 0 400 400" width="30">
+                        <circle cx="200" cy="200" fill="white" r="195" stroke="#000" stroke-width="10"></circle>
+                        <path d="M 200 375 A 175 175 0 0 1 200 25"></path>
+                        <path d="M 200 300 A 100 100 0 0 1 200 100" fill="#FFF"></path>
+                        <path d="M 200 100 A 100 100 180 0 1 200 300"></path>
+                    </svg>
+                </li>
+            </ul>
+            <div class="menu-button" id="menu-button">
+                ☰ <!-- Hamburger icon -->
+            </div>
+        </nav>
+    </header>
+    <!-- Main Section -->
+    <main>
+        <!-- Profile Section -->
+        <section class="about-section" id="about">
+            <div class="padding profile">
+                <img alt="Profile Picture" class="profile-pic box-shadow" src="./img/pf/profile-pic.png" />
+                <h2 style="margin-bottom: 0;">Hi, this is</h2>
+                <h1 style="margin-top: 0;">Pham Long <img alt="" src="./img/icons/badge.png" style="height: 28px;" />
+                </h1>
+                <div class="typing">
+                    and I'm a <span id="typed-text"></span><span class="cursor">|</span>
+                </div>
+                <br />
+                <br />
+                <p>Nếu bạn muốn mua Key AuroraVn giá rẻ thì hãy ib ở bên dưới</p>
+                <div class="social-buttons"></div>
+            </div>
+        </section>
+        <!-- Projects Section -->
+        <section class="projects-section" id="projects">
+            <div class="prj-collum">
+                <h2> </h2>
+                <div class="project">
+                    <h3> Telegram Channel Notification</h3>
+                    <a href="https://t.me/playping01" target="_blank"><img alt=""
+                            src="./img/icons/redirect.png" /></a>
+                </div>
+                <div class="project">
+                    <h3> Box Chat Zalo</h3>
+                    <a href="https://zalo.me/g/vruic971" target="_blank"><img alt=""
+                            src="./img/icons/redirect.png" /></a>
+                </div>
+                <div class="project">
+                    <h3>Box Chat Messenger</h3>
+					<a href="https://m.me/j/Abb7x2Ql4c0-_b_r/" target="_blank"><img alt="Discord"
+                            src="./img/icons/redirect.png" /></a>
+                </div>
+            </div>
+            </div>
+            <div class="proj-collum">
+            </div>
+        </section>
+        <!-- app section  -->
+        <h2 id="app" style="text-align: center;">Cheat App</h2>
+        <section class="app-section">
+        </section>
+        <div class="line"></div>
+        <h2 style="text-align: center; margin-top: 5em;">Data</h2>
+        <br />
+        <div class="ksign-section"></div>
+        <div class="line"></div>
+        <h2 style="text-align: center; margin-top: 5em;"></h2>
+        <br />
+        <div class="esign-section"></div>
+        <div class="wave-container" id="wave1">
+            <svg viewbox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+                <path class="svg1"
+                    d="M0,288L48,272C96,256,192,224,288,213.3C384,203,480,213,576,213.3C672,213,768,203,864,192C960,181,1056,171,1152,165.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                    fill="#fff" fill-opacity="1"></path>
+            </svg>
+        </div>
+        <!-- Skills Section -->
+        <section class="skills-section" id="skills">
+            <h2>Programming Language Skills</h2>
+            <div class="skill">
+                <span>HTML/CSS/JS</span>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-percent="76%" style="background-color: #e34c26;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>Python</span>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-percent="68%" style="background-color: #1f5af9;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>Batch Script</span>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-percent="12%" style="background-color: #89a5f3;"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <span>C/C++</span>
+                <div class="skill-bar">
+                    <div class="skill-fill" data-percent="9%" style="background-color: #f29111;"></div>
+                </div>
+            </div>
+        </section>
+        <section class="contact-section" id="contact">
+            <h2>Contact Me</h2>
+            <p>Pham Long<strong> phamlongsoftware@gmail.com</strong>.</p>
+        </section>
+    </main>
+	<footer class="footer">
+    <p><strong>Developed by @plongdev_</strong></p>
+    <p>© 
+2025 TeamOne Developer. All rights reserved.</p>
+</footer>
+    <script src="main.js"></script>
+    <script src="app.js"></script>
+</body>
+
 </html>
