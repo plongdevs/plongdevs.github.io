@@ -1,10 +1,9 @@
 // ==========================
-// APP DATA CONFIGURATION
+// APP DATA
 // ==========================
 const apps = [
     {
-        id: 'fakelagrb',
-        name: 'FakeLag Reborn ✅ ',
+        name: 'FakeLag Reborn ✅',
         url: 'https://drive.google.com/file/d/19HLe6X61w-V3z3FvWYHv4sO2XpOOrrVA/view?usp=drivesdk',
         img: './img/appicons/fạkelag reborn.jpg',
         descriptions: 'Hack FakeLag chống band vv',
@@ -12,7 +11,6 @@ const apps = [
         updated: '09/10/2025'
     },
     {
-        id: 'playping',
         name: 'PlayPing ✅',
         url: 'https://www.mediafire.com/file/80vwmrhzly94e10/PlayPing+No+Update.apk/file',
         img: './img/appicons/playping.jpg',
@@ -21,7 +19,6 @@ const apps = [
         updated: '09/10/2025'
     },
     {
-        id: 'netwing',
         name: 'Netwing',
         url: 'https://www.mediafire.com/file/h9xc4z01xj0fwxp/Netwing+0.11.0B.F2++.apk/file',
         img: './img/appicons/netwing.jpg',
@@ -30,7 +27,6 @@ const apps = [
         updated: '09/10/2025'
     },
     {
-        id: 'fayfay',
         name: 'FayFayConfig ✅',
         url: 'https://www.mediafire.com/file/w691w2cg0u5mrtq/FayFay+Config+2.0.6.apk/file',
         img: './img/appicons/fayfayconfig.jpg',
@@ -42,7 +38,6 @@ const apps = [
 
 const datafile = [
     {
-        id: 'keomini',
         name: 'DATA Bom Keo mini Antiband ✅',
         url: 'https://www.mediafire.com/file/7szp1su417oq3iz/Keo+Mini.zip/file',
         img: 'img/pf/zip.png',
@@ -51,7 +46,6 @@ const datafile = [
         updated: '09/10/2025'
     },
     {
-        id: 'xebay',
         name: 'DATA Xe bay đảo thế kỉ✅',
         url: 'https://www.mediafire.com/file/lrplx2guoies3ns/xe+bay+đảo+thế+kỉ.zip/file',
         img: 'img/pf/zip.png',
@@ -60,7 +54,6 @@ const datafile = [
         updated: '09/10/2025'
     },
     {
-        id: 'dontho',
         name: 'DATA Tử chiến độn thổ đảo thế kỉ ✅',
         url: 'https://www.mediafire.com/file/2faijugnfaqvobm/Tử+chiến+xuyên+lòng+đất.zip/file',
         img: 'img/pf/zip.png',
@@ -73,10 +66,8 @@ const datafile = [
 // ==========================
 // ICON SVG
 // ==========================
-const cloudIcon = `
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
-     stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-     class="lucide lucide-download">
+const cloudIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download">
   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
   <polyline points="7 10 12 15 17 10"/>
   <line x1="12" y1="15" x2="12" y2="3"/>
@@ -91,9 +82,9 @@ const ksignContainer = document.querySelector('.ksign-section');
 // ==========================
 // RENDER UI
 // ==========================
-function render(app, index, type) {
+function render(app) {
     return `
-    <div class="app-container" data-type="${type}" data-index="${index}">
+    <div class="app-container">
         <div class="app">
             <img src="${app.img}" class="app-img box-shadow" alt="${app.name}">
             <h1 style="margin-left: 1em">${app.name}<br>
@@ -108,33 +99,8 @@ function render(app, index, type) {
     </div>`;
 }
 
-function addClickHandler(container, dataArray) {
-    if (!container) return;
-    container.addEventListener('click', (event) => {
-        const target = event.target.closest('.app-container');
-        if (target) {
-            const index = target.getAttribute('data-index');
-            const app = dataArray[index];
-            const url = target.querySelector('.download-btn').getAttribute('href');
-            window.open(url, '_blank');
-        }
-    });
-}
-
 // ==========================
 // INIT
 // ==========================
-if (appContainer) {
-    apps.forEach((app, i) => {
-        appContainer.innerHTML += render(app, i, 'apps');
-    });
-}
-
-if (ksignContainer) {
-    datafile.forEach((app, i) => {
-        ksignContainer.innerHTML += render(app, i, 'ksign');
-    });
-}
-
-addClickHandler(appContainer, apps);
-addClickHandler(ksignContainer, datafile);
+if (appContainer) apps.forEach(app => appContainer.innerHTML += render(app));
+if (ksignContainer) datafile.forEach(app => ksignContainer.innerHTML += render(app));
