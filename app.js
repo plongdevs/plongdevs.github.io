@@ -40,7 +40,7 @@ const apps = [
     },
 ];
 
-const ksignApps = [
+const datafile = [
     {
         id: 'keomini',
         name: 'DATA Bom Keo mini Antiband ✅',
@@ -89,9 +89,9 @@ const appContainer = document.querySelector('.app-section');
 const ksignContainer = document.querySelector('.ksign-section');
 
 // ==========================
-// API Mock
+// API CONFIG
 // ==========================
-const API_URL = 'https://68e7a81f10e3f82fbf4020dd.mockapi.io/downloads';
+const API_URL = 'https://68e7a81f10e3f82fbf4020dd.mockapi.io/PLongDownloads';
 
 async function getDownloadCount(id, element) {
     try {
@@ -100,10 +100,10 @@ async function getDownloadCount(id, element) {
         if (data.length > 0) {
             element.textContent = data[0].count;
         } else {
-            element.textContent = 0;
+            element.textContent = 'nan';
         }
     } catch (err) {
-        element.textContent = 0;
+        element.textContent = 'nan';
     }
 }
 
@@ -145,7 +145,7 @@ function render(app, index, type) {
                 <p>${app.descriptions}</p>
                 <p><strong>Dung lượng:</strong> ${app.size}</p>
                 <p><strong>Ngày cập nhật:</strong> ${app.updated}</p>
-                <p><strong>Lượt tải:</strong> <span class="download-count" id="dl-${app.id}">0</span></p>
+                <p><strong>Lượt tải:</strong> <span class="download-count" id="dl-${app.id}">nan</span></p>
             </h1>
         </div>
         <a href="${app.url}" target="_blank" class="download-btn" style="color: #007aff; text-decoration: none;">
@@ -181,7 +181,7 @@ if (appContainer) {
 }
 
 if (ksignContainer) {
-    ksignApps.forEach((app, i) => {
+    datafile.forEach((app, i) => {
         ksignContainer.innerHTML += render(app, i, 'ksign');
     });
 }
@@ -191,10 +191,10 @@ apps.forEach(app => {
     getDownloadCount(app.id, el);
 });
 
-ksignApps.forEach(app => {
+datafile.forEach(app => {
     const el = document.getElementById(`dl-${app.id}`);
     getDownloadCount(app.id, el);
 });
 
 addClickHandler(appContainer, apps);
-addClickHandler(ksignContainer, ksignApps);
+addClickHandler(ksignContainer, datafile);
