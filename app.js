@@ -11,12 +11,12 @@ const apps = [
         updated: '09/10/2025'
     },
     {
-        name: 'PlayPing ✅',
-        url: 'https://www.mediafire.com/file/80vwmrhzly94e10/PlayPing+No+Update.apk/file',
+        name: 'PlayPing Premium ✅',
+        url: 'https://link4m.com/EG8kTp',
         img: './img/appicons/playping.jpg',
-        descriptions: 'Playping No update by ©PLong X Nguyễn Tiêu',
+        descriptions: 'Playping No update crack premium by ©PLong',
         size: '16 MB',
-        updated: '09/10/2025'
+        updated: '14/10/2025'
     },
     {
         name: 'Netwing',
