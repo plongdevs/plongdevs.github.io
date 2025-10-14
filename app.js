@@ -12,9 +12,9 @@ const apps = [
     },
     {
         name: 'PlayPing Premium ✅',
-        url: 'https://link4m.com/EG8kTp',
+        url: '',
         img: './img/appicons/playping.jpg',
-        descriptions: 'Playping No update crack premium by ©PLong',
+        descriptions: 'Playping No update crack premium by ©PLong (Hết Hàng)',
         size: '16 MB',
         updated: '14/10/2025'
     },
