@@ -11,7 +11,7 @@ const apps = [
         updated: '09/10/2025'
     },
     {
-        name: 'PlayPing Premium v1.6.4 ✅',
+        name: 'PlayPing Premium Crack ✅',
         url: 'https://link4m.com/kRzzJa',
         img: './img/appicons/playping.jpg',
         descriptions: 'PlayPing FakeLag Premium by PLongXNguyễnTiêu',
