@@ -13,7 +13,7 @@ const apps = [
     {
         name: 'PlayPing Premium v1.6.4 ✅',
         url: 'https://link4m.com/kRzzJa',
-        img: './img/appicons/fạkelag playping.jpg',
+        img: './img/appicons/playping.jpg',
         descriptions: 'PlayPing FakeLag Premium by PLongXNguyễnTiêu',
         size: '7.5 MB',
         updated: '2/11/2025'
