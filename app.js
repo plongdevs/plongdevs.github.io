@@ -53,14 +53,6 @@ const datafile = [
         size: '6 MB',
         updated: '09/10/2025'
     },
-    {
-        name: 'DATA Tử chiến độn thổ đảo thế kỉ ✅',
-        url: 'https://www.mediafire.com/file/2faijugnfaqvobm/Tử+chiến+xuyên+lòng+đất.zip/file',
-        img: 'img/pf/zip.png',
-        descriptions: 'Nhớ bật orion khi xuống...',
-        size: '29 MB',
-        updated: '09/10/2025'
-    }
 ];
 
 // ==========================
