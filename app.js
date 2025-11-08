@@ -59,7 +59,7 @@ const esign-section = [
         name: 'Termux 1.1.9_1✅',
         url: 'https://www.mediafire.com/file/483k4jvlt1h0rlx/termux_1.1.9_1.apk/file',
         img: './img/appicons/termux.png',
-        descriptions: Termux New Version',
+        descriptions: 'Termux New Version',
         size: '107 MB',
         updated: '09/10/2025'
     },
