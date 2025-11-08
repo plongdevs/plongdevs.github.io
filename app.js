@@ -5,7 +5,7 @@ const apps = [
     {
         name: 'FakeLag Reborn ✅',
         url: 'https://drive.google.com/file/d/19HLe6X61w-V3z3FvWYHv4sO2XpOOrrVA/view?usp=drivesdk',
-        img: './img/appicons/fạkelag reborn.jpg',
+        img: './img/appicons/fakelag reborn.jpg',
         descriptions: 'Hack FakeLag',
         size: '352 KB',
         updated: '09/10/2025'
@@ -54,7 +54,15 @@ const datafile = [
         updated: '09/10/2025'
     },
 ];
-
+const esign-section = [
+    {
+        name: 'Termux 1.1.9_1✅',
+        url: 'https://www.mediafire.com/file/483k4jvlt1h0rlx/termux_1.1.9_1.apk/file',
+        img: './img/appicons/termux.png',
+        descriptions: Termux New Version',
+        size: '107 MB',
+        updated: '09/10/2025'
+    },
 // ==========================
 // ICON SVG
 // ==========================
