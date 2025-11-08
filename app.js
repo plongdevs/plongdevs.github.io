@@ -54,15 +54,96 @@ const datafile = [
         updated: '09/10/2025'
     },
 ];
-const esign-section = [
+
+const esignApps = [
     {
-        name: 'Termux 1.1.9_1✅',
-        url: 'https://www.mediafire.com/file/483k4jvlt1h0rlx/termux_1.1.9_1.apk/file',
-        img: './img/appicons/termux.png',
-        descriptions: 'Termux New Version',
-        size: '107 MB',
-        updated: '09/10/2025'
+        name: 'ESign ✅',
+        url: 'https://api.khoindvn.io.vn/jA06Dp',
+        img: 'img/pf/profile-pic.png',
+        descriptions: 'China National Heavy Duty Truck Group Co., Ltd.'   
+    },{
+        name: 'ESign',
+        url: 'https://api.khoindvn.io.vn/SUvkkC',
+        img: 'img/pf/profile-pic.png',
+        descriptions: 'Guangzhou Huahan Educational & Technology Co.,Ltd'   
+    },{
+        name: 'ESign',
+        url: 'https://api.khoindvn.io.vn/qylEe1',
+        img: 'img/pf/profile-pic.png',
+        descriptions: 'China Telecommunications Corporation'   
+    },{
+        name: 'ESign',
+        url: 'https://api.khoindvn.io.vn/yHH6NE',
+        img: 'img/pf/profile-pic.png',
+        descriptions: 'GLOBAL TAKEOFF, INC'   
     },
+    {
+        name: 'ESign',
+        url: 'https://api.khoindvn.io.vn/SXgmxb',
+        img: 'img/pf/profile-pic.png',
+        descriptions: 'Tianjin University of Commerce'   
+    },
+    {
+        name: 'ESign',
+        url: 'https://api.khoindvn.io.vn/7SxrmH',
+        img: 'img/pf/profile-pic.png',
+        descriptions: 'VIETNAM JOINT STOCK COMMERCIAL BANK FOR INDUSTRY AND TRADE'   
+    },
+    {
+        name: 'ESign',
+        url: 'https://api.khoindvn.io.vn/KX3VBb',
+        img: 'img/pf/profile-pic.png',
+        descriptions: 'VIETTEL GROUP'   
+    },
+    {
+        name: 'ESign',
+        url: 'https://api.khoindvn.io.vn/u9v6lH',
+        img: 'img/pf/profile-pic.png',
+        descriptions: 'CHIBA INSTITUTE OF TECHNOLOGY'   
+    },
+    {
+        name: 'ESign',
+        url: 'https://api.khoindvn.io.vn/rR9jps',
+        img: 'img/pf/profile-pic.png',
+        descriptions: 'Beijing Esensoft Co., Ltd'   
+    },
+    {
+        name: 'ESign',
+        url: 'https://api.khoindvn.io.vn/DoD29p',
+        img: 'img/pf/profile-pic.png',
+        descriptions: 'NREH ESTATE INFORMATION TECHNOLOGY CO.,LTD'   
+    },
+    {
+        name: 'ESign',
+        url: 'https://api.khoindvn.io.vn/OuUeFv',
+        img: 'img/pf/profile-pic.png',
+        descriptions: 'China Railway Eryuan Engineering Group Co., Ltd.'   
+    },
+    {
+        name: 'ESign',
+        url: 'https://api.khoindvn.io.vn/kKZQf7',
+        img: 'img/pf/profile-pic.png',
+        descriptions: 'EEO Education ltd'   
+    },
+    {
+        name: 'ESign',
+        url: 'https://api.khoindvn.io.vn/khDDZF',
+        img: 'img/pf/profile-pic.png',
+        descriptions: 'TCL household Appliance Marketing Co., LTD'   
+    },
+    {
+        name: 'ESign',
+        url: 'https://api.khoindvn.io.vn/qhVaFI',
+        img: 'img/pf/profile-pic.png',
+        descriptions: 'Wuling Power Corporation'   
+    },
+    {
+        name: 'ESign',
+        url: 'https://api.khoindvn.io.vn/1ZJIPP',
+        img: 'img/pf/profile-pic.png',
+        descriptions: 'HDFC Bank Limited'
+    }
+    
 ];
 // ==========================
 // ICON SVG
