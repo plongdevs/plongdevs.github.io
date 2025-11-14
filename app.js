@@ -51,7 +51,7 @@ const Other = [
     {
         name: 'Termux 1.1.9_1 ✅',
         url: 'https://www.mediafire.com/file/483k4jvlt1h0rlx/termux_1.1.9_1.apk/file',
-        img: 'img/pf/profile-pic.png',
+        img: 'img/appicons/termux.png',
         descriptions: 'Termux Newest Version'   
     },    
 ];
