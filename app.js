@@ -71,7 +71,7 @@ const cloudIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24
 // ==========================
 const appContainer = document.querySelector('.app-section');
 const ksignContainer = document.querySelector('.ksign-section');
-const esignContainer = document.querySelector('.esign-section');
+const otherContainer = document.querySelector('.other-section');
 
 // ==========================
 // RENDER UI
@@ -109,7 +109,7 @@ if (ksignContainer) {
 }
 
 if (otherContainer) {
-    OtherApps.forEach(app => {
+    Other.forEach(app => {
         otherContainer.innerHTML += render(app);
     });
 }
