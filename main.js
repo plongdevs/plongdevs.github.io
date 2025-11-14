@@ -15,7 +15,7 @@ const SOCIALS = [
     },
     {
         name: 'tiktok',
-        url: 'https://tiktok.com/@plong.128'
+        url: 'https://www.tiktok.com/@plongdev.128'
     },
     {
         name: 'telegram',
