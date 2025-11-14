@@ -47,7 +47,7 @@ const datafile = [
     },
 ];
 
-const esignApps = [
+const Other = [
     {
         name: 'Termux 1.1.9_1 ✅',
         url: 'https://www.mediafire.com/file/483k4jvlt1h0rlx/termux_1.1.9_1.apk/file',
@@ -108,8 +108,8 @@ if (ksignContainer) {
     });
 }
 
-if (esignContainer) {
-    esignApps.forEach(app => {
-        esignContainer.innerHTML += render(app);
+if (otherContainer) {
+    OtherApps.forEach(app => {
+        otherContainer.innerHTML += render(app);
     });
 }
