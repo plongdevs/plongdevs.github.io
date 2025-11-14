@@ -7,20 +7,15 @@
     <meta content="ie=edge" http-equiv="X-UA-Compatible" />
     <title>PLongDev</title>
     <link href="styles.css" rel="stylesheet" />
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css" rel="stylesheet" /> -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-tomorrow.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-cpp.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-java.min.js"></script>
     <link href="app.css" rel="stylesheet" />
-    <link as="style"
-        href="https://ipa.chungchi365.com/_nuxt/iconfont-78cf5cacb1b8b5a62052065f527281e56b15ceae3f20ebdfd5fe0cfaebbd737c.Bc_iiR8Q.svg"
-        onload="this.rel='stylesheet'" rel="stylesheet" />
 </head>
 
 <body>
     <!-- Navbar -->
-    <div class="enter"></div>
     <header>
         <nav class="navbar box-shadow">
             <div class="th"></div>
@@ -30,23 +25,12 @@
                 <li><a href="#app">Application</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li style="display: flex; width: 26px;">
-                    <svg class="color-mode" height="30" id="colorMode" viewbox="0 0 400 400" width="30">
-                        <circle cx="200" cy="200" fill="white" r="195" stroke="#000" stroke-width="10"></circle>
-                        <path d="M 200 375 A 175 175 0 0 1 200 25"></path>
-                        <path d="M 200 300 A 100 100 0 0 1 200 100" fill="#FFF"></path>
-                        <path d="M 200 100 A 100 100 180 0 1 200 300"></path>
-                    </svg>
-                </li>
             </ul>
             <div class="menu-button" id="menu-button">
-                ☰ <!-- Hamburger icon -->
+                ☰
             </div>
         </nav>
     </header>
-
-    <!-- Đồng hồ hiển thị ngay dưới navbar -->
-    <div id="clock" style="text-align:center; font-size:18px; margin: 10px 0;"></div>
 
     <!-- Main Section -->
     <main>
@@ -55,13 +39,15 @@
             <div class="padding profile">
                 <img alt="Profile Picture" class="profile-pic box-shadow" src="./img/pf/profile-pic.png" />
                 <h2 style="margin-bottom: 0;">Hi, this is</h2>
-                <h1 style="margin-top: 0;">Pham Long <img alt="" src="./img/icons/badge.png" style="height: 28px;" />
-                </h1>
+                <h1 style="margin-top: 0;">Pham Long <img alt="" src="./img/icons/badge.png" style="height: 28px;" /></h1>
                 <div class="typing">
                     and I'm a <span id="typed-text"></span><span class="cursor">|</span>
                 </div>
-                <br />
-                <br />
+
+                <!-- Đồng hồ ngay dưới dòng "and I'm a ..." -->
+                <div id="clock" style="text-align:center; font-size:28px; margin-top:15px; font-weight:bold;"></div>
+
+                <br /><br />
                 <p>Nếu bạn muốn mua Key AuroraVn giá rẻ thì hãy ib ở bên dưới</p>
                 <div class="social-buttons"></div>
             </div>
@@ -70,24 +56,19 @@
         <!-- Projects Section -->
         <section class="projects-section" id="projects">
             <div class="prj-collum">
-                <h2> </h2>
                 <div class="project">
-                    <h3> Telegram Channel Notification</h3>
-                    <a href="https://t.me/playping01" target="_blank"><img alt=""
-                            src="./img/icons/redirect.png" /></a>
+                    <h3>Telegram Channel Notification</h3>
+                    <a href="https://t.me/playping01" target="_blank"><img alt="" src="./img/icons/redirect.png" /></a>
                 </div>
                 <div class="project">
-                    <h3> Box Chat Zalo</h3>
-                    <a href="https://zalo.me/g/vruic971" target="_blank"><img alt=""
-                            src="./img/icons/redirect.png" /></a>
+                    <h3>Box Chat Zalo</h3>
+                    <a href="https://zalo.me/g/vruic971" target="_blank"><img alt="" src="./img/icons/redirect.png" /></a>
                 </div>
                 <div class="project">
                     <h3>Box Chat Messenger</h3>
-                    <a href="https://m.me/j/Abb7x2Ql4c0-_b_r/" target="_blank"><img alt="Discord"
-                            src="./img/icons/redirect.png" /></a>
+                    <a href="https://m.me/j/Abb7x2Ql4c0-_b_r/" target="_blank"><img alt="Discord" src="./img/icons/redirect.png" /></a>
                 </div>
             </div>
-            <div class="proj-collum"></div>
         </section>
 
         <!-- App Section -->
@@ -96,14 +77,14 @@
 
         <div class="line"></div>
         <h2 style="text-align: center; margin-top: 5em;">Data Mod</h2>
-        <br />
         <div class="ksign-section"></div>
         <div class="line"></div>
         <h2 style="text-align: center; margin-top: 5em;">Other</h2>
-        <br />
         <div class="esign-section"></div>
+
+        <!-- Wave SVG -->
         <div class="wave-container" id="wave1">
-            <svg viewbox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
                 <path class="svg1"
                     d="M0,288L48,272C96,256,192,224,288,213.3C384,203,480,213,576,213.3C672,213,768,203,864,192C960,181,1056,171,1152,165.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
                     fill="#fff" fill-opacity="1"></path>
@@ -151,17 +132,16 @@
 
     <!-- Script đồng hồ -->
     <script>
-        // Hàm lấy thời gian hiện tại (theo giờ Việt Nam)
+        const colors = ["#ff4c4c", "#4cff4c", "#4c4cff", "#ffb84c", "#ff4cff"];
+
         function getVNTime() {
             const now = new Date();
-            const utc = now.getTime() + now.getTimezoneOffset() * 60000; // chuyển sang UTC
-            return new Date(utc + 7 * 3600000); // +7 giờ Việt Nam
+            const utc = now.getTime() + now.getTimezoneOffset() * 60000;
+            return new Date(utc + 7 * 3600000);
         }
 
-        // Hàm cập nhật đồng hồ
         function updateClock() {
             const vnTime = getVNTime();
-
             const hours = vnTime.getHours().toString().padStart(2, '0');
             const minutes = vnTime.getMinutes().toString().padStart(2, '0');
             const seconds = vnTime.getSeconds().toString().padStart(2, '0');
@@ -170,14 +150,15 @@
             const year = vnTime.getFullYear();
 
             const timeString = `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
-            document.getElementById('clock').textContent = timeString;
+            const clockEl = document.getElementById('clock');
+            clockEl.textContent = timeString;
+
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            clockEl.style.color = randomColor;
         }
 
-        // Cập nhật ngay lập tức
         updateClock();
-        // Cập nhật mỗi giây
         setInterval(updateClock, 1000);
     </script>
 </body>
-
 </html>
