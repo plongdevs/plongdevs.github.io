@@ -63,6 +63,7 @@ const esignApps = [
         descriptions: 'China National Heavy Duty Truck Group Co., Ltd.'   
     },    
 ];
+
 // ==========================
 // ICON SVG
 // ==========================
@@ -78,6 +79,7 @@ const cloudIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24
 // ==========================
 const appContainer = document.querySelector('.app-section');
 const ksignContainer = document.querySelector('.ksign-section');
+const esignContainer = document.querySelector('.esign-section');
 
 // ==========================
 // RENDER UI
@@ -89,8 +91,8 @@ function render(app) {
             <img src="${app.img}" class="app-img box-shadow" alt="${app.name}">
             <h1 style="margin-left: 1em">${app.name}<br>
                 <p>${app.descriptions}</p>
-                <p><strong>Dung lượng:</strong> ${app.size}</p>
-                <p><strong>Ngày cập nhật:</strong> ${app.updated}</p>
+                ${app.size ? `<p><strong>Dung lượng:</strong> ${app.size}</p>` : ''}
+                ${app.updated ? `<p><strong>Ngày cập nhật:</strong> ${app.updated}</p>` : ''}
             </h1>
         </div>
         <a href="${app.url}" target="_blank" class="download-btn" style="color: #007aff; text-decoration: none;">
@@ -102,5 +104,20 @@ function render(app) {
 // ==========================
 // INIT
 // ==========================
-if (appContainer) apps.forEach(app => appContainer.innerHTML += render(app));
-if (ksignContainer) datafile.forEach(app => ksignContainer.innerHTML += render(app));
+if (appContainer) {
+    apps.forEach(app => {
+        appContainer.innerHTML += render(app);
+    });
+}
+
+if (ksignContainer) {
+    datafile.forEach(app => {
+        ksignContainer.innerHTML += render(app);
+    });
+}
+
+if (esignContainer) {
+    esignApps.forEach(app => {
+        esignContainer.innerHTML += render(app);
+    });
+}
