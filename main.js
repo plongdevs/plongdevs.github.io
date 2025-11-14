@@ -19,7 +19,7 @@ const SOCIALS = [
     },
     {
         name: 'telegram',
-        url: 'https://t.me/playping01'
+        url: 'https://t.me/plongdev'
     },
     {
         name: 'zalo',
