@@ -19,14 +19,6 @@ const apps = [
         updated: '2/11/2025'
     },
     {
-        name: 'Netwing',
-        url: 'https://www.mediafire.com/file/h9xc4z01xj0fwxp/Netwing+0.11.0B.F2++.apk/file',
-        img: './img/appicons/netwing.jpg',
-        descriptions: 'Hack FakeLag Anti thấp ko nên tải',
-        size: '34 MB',
-        updated: '09/10/2025'
-    },
-    {
         name: 'FayFayConfig ✅',
         url: 'https://www.mediafire.com/file/w691w2cg0u5mrtq/FayFay+Config+2.0.6.apk/file',
         img: './img/appicons/fayfayconfig.jpg',
@@ -57,10 +49,10 @@ const datafile = [
 
 const esignApps = [
     {
-        name: 'ESign ✅',
-        url: 'https://api.khoindvn.io.vn/jA06Dp',
+        name: 'Termux 1.1.9_1 ✅',
+        url: 'https://www.mediafire.com/file/483k4jvlt1h0rlx/termux_1.1.9_1.apk/file',
         img: 'img/pf/profile-pic.png',
-        descriptions: 'China National Heavy Duty Truck Group Co., Ltd.'   
+        descriptions: 'Termux Newest Version'   
     },    
 ];
 
