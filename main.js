@@ -11,11 +11,11 @@ const TYPING_CONFIG = {
 const SOCIALS = [
     {
         name: 'facebook',
-        url: 'https://www.facebook.com/profile.php?id=61578035895912#'
+        url: 'https://www.facebook.com/share/1CbVxVCuij/'
     },
     {
         name: 'tiktok',
-        url: 'https://tiktok.com/@teamone25k'
+        url: 'https://tiktok.com/@plong.128'
     },
     {
         name: 'telegram',
