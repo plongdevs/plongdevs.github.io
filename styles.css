@@ -427,3 +427,12 @@ body {
 .footer p {
     margin: 5px 0;
 }
+.text-gradient {
+  background: linear-gradient(to right, #6366f1, #ec4899); /* Indigo → Pink */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 600; /* giống font-semibold */
+  font-size: inherit; /* kế thừa font-size từ phần tử cha */
+  line-height: inherit; /* giữ line-height của phần tử cha */
+}
