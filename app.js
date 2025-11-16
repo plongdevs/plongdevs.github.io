@@ -58,7 +58,7 @@ const Other = [
     },
     {
         name: 'MT Manager Vip 2.14.5-Clone ✅',
-        url: 'https://plongdevs.github.io/mtmanager.png',
+        url: 'https://plongdevs.github.io/mtvip',
         img: 'img/appicons/mtmanager.png',
         descriptions: 'Ko đăng nhập tk hoặc cập nhật app tránh lỗi',
         size: '22 MB',
