@@ -1,40 +1,24 @@
-
 // CONFIGURATION & DATA
-
 const TYPING_CONFIG = {
     texts: ["Seller.", "Designer.", "Developer."],
-    typingSpeed: 100,
-    deletingSpeed: 50,
+    typingSpeed: 100,        // 1 ký tự mỗi 0.1 giây
+    deletingSpeed: 50,       // xóa chậm hơn
     pauseBeforeDeleting: 2000
 };
 
 const SOCIALS = [
-    {
-        name: 'facebook',
-        url: 'https://www.facebook.com/share/1CbVxVCuij/'
-    },
-    {
-        name: 'tiktok',
-        url: 'https://www.tiktok.com/@plongdev.128'
-    },
-    {
-        name: 'telegram',
-        url: 'https://t.me/plongdev'
-    },
-    {
-        name: 'zalo',
-        url: 'https://zalo.me/0936384089'
-    }
+    { name: 'facebook', url: 'https://www.facebook.com/share/1CbVxVCuij/' },
+    { name: 'tiktok', url: 'https://www.tiktok.com/@plongdev.128' },
+    { name: 'telegram', url: 'https://t.me/plongdev' },
+    { name: 'zalo', url: 'https://zalo.me/0936384089' }
 ];
 
 // TYPING ANIMATION STATE
-
 let textIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
 
 // UTILITY FUNCTIONS
-
 function isInViewport(element) {
     const rect = element.getBoundingClientRect();
     return (
@@ -46,11 +30,10 @@ function isInViewport(element) {
 }
 
 // TYPING ANIMATION
-
 function typeText() {
     const currentText = TYPING_CONFIG.texts[textIndex];
     const typedTextElement = document.getElementById("typed-text");
-    
+
     if (!isDeleting && charIndex < currentText.length) {
         typedTextElement.innerHTML = currentText.substring(0, charIndex + 1);
         charIndex++;
@@ -70,11 +53,8 @@ function typeText() {
 }
 
 // SKILL BARS ANIMATION
-
 function animateSkillBars() {
-    const skillBars = document.querySelectorAll('.skill-fill');
-    
-    skillBars.forEach(bar => {
+    document.querySelectorAll('.skill-fill').forEach(bar => {
         const percent = bar.getAttribute('data-percent');
         bar.style.width = percent;
     });
@@ -89,13 +69,12 @@ function handleSkillsAnimation() {
 }
 
 // NAVIGATION MENU
-
 function initializeMenuToggle() {
     const menuButton = document.getElementById('menu-button');
     const navLinks = document.querySelector('.nav-links');
-    
+
     if (menuButton && navLinks) {
-        menuButton.addEventListener('click', function() {
+        menuButton.addEventListener('click', () => {
             navLinks.classList.toggle('show');
             navLinks.classList.toggle('box-shadow');
         });
@@ -103,103 +82,79 @@ function initializeMenuToggle() {
 }
 
 // SOCIAL BUTTONS
-
 function createSocialButtons() {
-    const socialButtonContainer = document.querySelector('.social-buttons');
-    
-    if (!socialButtonContainer) return;
-    
+    const container = document.querySelector('.social-buttons');
+    if (!container) return;
+
     SOCIALS.forEach(social => {
         const button = document.createElement('button');
         button.classList.add('social-btn', 'box-shadow');
         button.innerHTML = `<img src="img/logo/${social.name}.png" class="logo" alt="${social.name}"/>`;
-        button.addEventListener('click', () => {
-            window.open(social.url, '_blank');
-        });
-        socialButtonContainer.appendChild(button);
+        button.addEventListener('click', () => window.open(social.url, '_blank'));
+        container.appendChild(button);
     });
 }
 
 // DARK MODE TOGGLE
-
 function initializeDarkModeToggle() {
     const colorModeButton = document.querySelector('#colorMode, .color-mode, [data-color-mode]');
-    
     if (!colorModeButton) return;
-    
     colorModeButton.addEventListener('click', toggleDarkMode);
 }
 
 function toggleDarkMode() {
-    const elements = {
-        body: document.body,
-        skillsSection: document.querySelector('.skills-section'),
-        wave1: document.querySelector('#wave1'),
-        wave2: document.querySelector('#wave2'),
-        svg1: document.querySelector('.svg1'),
-        svg2: document.querySelector('.svg2')
-    };
-    
-    const currentDarkMode = document.body.style.getPropertyValue("--dark-mode") - 0;
+    const body = document.body;
+    const currentDarkMode = parseInt(getComputedStyle(body).getPropertyValue("--dark-mode"));
     const isDarkMode = Boolean(currentDarkMode);
-    
-    elements.body.style.setProperty("--dark-mode", 1 - currentDarkMode);
-    
-    elements.body.style.color = isDarkMode ? 'black' : 'white';
-    elements.body.style.background = isDarkMode 
-        ? 'linear-gradient(0deg, #94bbff, #fff)' 
+
+    body.style.setProperty("--dark-mode", 1 - currentDarkMode);
+    body.style.color = isDarkMode ? 'black' : 'white';
+    body.style.background = isDarkMode
+        ? 'linear-gradient(0deg, #94bbff, #fff)'
         : 'linear-gradient(0deg, #777272, #000)';
-    
-    if (elements.skillsSection) {
-        elements.skillsSection.style.backgroundColor = isDarkMode ? 'white' : 'black';
-    }
-    
-    if (elements.svg1) {
-        elements.svg1.style.fill = isDarkMode ? 'white' : 'black';
-    }
-    
-    if (elements.wave2) {
-        elements.wave2.style.backgroundColor = isDarkMode ? 'white' : 'black';
-    }
-    
-    if (elements.svg2) {
-        elements.svg2.style.fill = isDarkMode ? '#f4f4f4' : 'black';
-    }
+
+    const skillsSection = document.querySelector('.skills-section');
+    if (skillsSection) skillsSection.style.backgroundColor = isDarkMode ? 'white' : 'black';
+
+    const svg1 = document.querySelector('.svg1');
+    if (svg1) svg1.style.fill = isDarkMode ? 'white' : 'black';
+
+    const wave2 = document.querySelector('#wave2');
+    if (wave2) wave2.style.backgroundColor = isDarkMode ? 'white' : 'black';
+
+    const svg2 = document.querySelector('.svg2');
+    if (svg2) svg2.style.fill = isDarkMode ? '#f4f4f4' : 'black';
 }
 
 // ENTRANCE ANIMATION
-
 function playEntranceAnimation() {
     const enterElement = document.querySelector('.enter');
     if (!enterElement) return;
-    
+
     for (let i = 20; i >= 0; i--) {
         setTimeout(() => {
-            const blurValue = `blur(${i}px)`;
-            enterElement.style.backdropFilter = blurValue;
-            enterElement.style.WebkitBackdropFilter = blurValue;
+            const blur = `blur(${i}px)`;
+            enterElement.style.backdropFilter = blur;
+            enterElement.style.WebkitBackdropFilter = blur;
         }, 40 * (20 - i));
     }
 }
 
 // INITIALIZATION
-
 function initializeApp() {
     initializeMenuToggle();
     createSocialButtons();
     initializeDarkModeToggle();
     playEntranceAnimation();
-    
+
     typeText();
     handleSkillsAnimation();
-    
     window.addEventListener('scroll', handleSkillsAnimation);
 }
 
-// EVENT LISTENERS
-
 document.addEventListener('DOMContentLoaded', initializeApp);
-// Thả tim
+
+// HEARTS ANIMATION
 (function(window, document) {
     const hearts = [];
 
@@ -207,10 +162,9 @@ document.addEventListener('DOMContentLoaded', initializeApp);
         const style = document.createElement("style");
         style.type = "text/css";
         style.appendChild(document.createTextNode(
-            ".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);}"+
-            ".heart:after,.heart:before{content:'';width:inherit;height:inherit;background:inherit;border-radius:50%;position:fixed;}"+
-            ".heart:after{top:-5px;}"+
-            ".heart:before{left:-5px;}"
+            ".heart{width:10px;height:10px;position:fixed;background:#f00;transform:rotate(45deg);}" +
+            ".heart:after,.heart:before{content:'';width:inherit;height:inherit;background:inherit;border-radius:50%;position:fixed;}" +
+            ".heart:after{top:-5px;}.heart:before{left:-5px;}"
         ));
         document.head.appendChild(style);
 
@@ -245,23 +199,26 @@ document.addEventListener('DOMContentLoaded', initializeApp);
             if (hearts[i].alpha <= 0) {
                 document.body.removeChild(hearts[i].el);
                 hearts.splice(i, 1);
+                i--;
                 continue;
             }
             hearts[i].y--;
             hearts[i].scale += 0.004;
             hearts[i].alpha -= 0.013;
-            hearts[i].el.style.cssText =
-                `left:${hearts[i].x}px;top:${hearts[i].y}px;opacity:${hearts[i].alpha};
-                 transform:scale(${hearts[i].scale}) rotate(45deg);
-                 background:${hearts[i].color};z-index:99999`;
+            hearts[i].el.style.cssText = `
+                left:${hearts[i].x}px;
+                top:${hearts[i].y}px;
+                opacity:${hearts[i].alpha};
+                transform:scale(${hearts[i].scale}) rotate(45deg);
+                background:${hearts[i].color};
+                z-index:99999;
+            `;
         }
         requestAnimationFrame(animateHearts);
     }
 
     function getRandomColor() {
-        return `rgb(${Math.floor(Math.random() * 255)},
-                    ${Math.floor(Math.random() * 255)},
-                    ${Math.floor(Math.random() * 255)})`;
+        return `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`;
     }
 
     window.requestAnimationFrame =
@@ -272,4 +229,3 @@ document.addEventListener('DOMContentLoaded', initializeApp);
 
     initHearts();
 })(window, document);
-

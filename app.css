@@ -5,21 +5,26 @@
     overflow-x: auto;
     justify-content: center;
 }
+
 .app-group {
     width: 30em;
 }
+
 .app img {
     height: 4em;
     border-radius: 16px;
 }
+
 .app {
     margin: 1rem;
     display: flex;
 }
+
 .line {
     position: relative;
     margin-top: 3em;
 }
+
 .line::after {
     content: "";
     position: absolute;
@@ -27,6 +32,7 @@
     width: 100%;
     border-bottom: 1px solid #ddd;
 }
+
 .install-btn {
     padding: 8px 26px;
     font-size: 13px;
@@ -39,21 +45,25 @@
     font-weight: 800;
     right: 0;
 }
+
 .install-btn:hover {
     background-color: #005bb5;
 }
+
 .app-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-right: 1em;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     transition-duration: 0.3s;
 }
+
 .app-container:hover {
     background-color: #cecece6b;
     cursor: pointer;
 }
+
 .app-container h1 {
     padding-top: 4px;
     font-size: 18px;
@@ -61,15 +71,18 @@
     text-align: left;
     font-weight: 400;
 }
+
 .app-container p {
     font-size: 14px;
     margin: 0;
     text-align: left;
     font-weight: 300;
 }
+
 .app-container p strong {
     font-weight: 600;
 }
+
 .download-count {
     color: #007aff;
     font-weight: bold;
