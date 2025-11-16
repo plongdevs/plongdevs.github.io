@@ -4,25 +4,25 @@
 const apps = [
     {
         name: 'FakeLag Reborn ✅',
-        url: 'https://drive.google.com/file/d/19HLe6X61w-V3z3FvWYHv4sO2XpOOrrVA/view?usp=drivesdk',
-        img: './img/appicons/fakelag reborn.jpg',
+        url: 'https://plongdevs.github.io/fakelagreborn',
+        img: './img/appicons/fakelagreborn.png',
         descriptions: 'Hack FakeLag',
         size: '352 KB',
         updated: '09/10/2025'
     },
     {
         name: 'PlayPing Premium Crack ✅',
-        url: 'https://link4m.com/kRzzJa',
-        img: './img/appicons/playping.jpg',
-        descriptions: 'PlayPing FakeLag Premium by PLongXNguyễnTiêu',
-        size: '7.5 MB',
+        url: 'https://plongdevs.github.io/playpingpremium',
+        img: './img/appicons/playping.png',
+        descriptions: 'PlayPing Premium by PLong X NguyễnTiêu',
+        size: '7 MB',
         updated: '2/11/2025'
     },
     {
-        name: 'FayFayConfig ✅',
-        url: 'https://www.mediafire.com/file/w691w2cg0u5mrtq/FayFay+Config+2.0.6.apk/file',
-        img: './img/appicons/fayfayconfig.jpg',
-        descriptions: 'PlayPing bản cũ ',
+        name: 'Hopper V7 Crack ✅',
+        url: 'https://plongdevs.github.io/hoppercrack',
+        img: './img/appicons/hopper.png',
+        descriptions: 'Hopper crack by NDL',
         size: '4 MB',
         updated: '09/10/2025'
     }
@@ -31,15 +31,15 @@ const apps = [
 const datafile = [
     {
         name: 'Data bom Keo mini Antiband ✅',
-        url: 'https://www.mediafire.com/file/7szp1su417oq3iz/Keo+Mini.zip/file',
+        url: 'https://plongdevs.github.io/keomini',
         img: 'img/pf/zip.png',
         descriptions: 'Áp dụng cho keo TCXH,STXH',
         size: '21 MB',
         updated: '09/10/2025'
     },
     {
-        name: 'Data xe bay đảo thế kỉ✅',
-        url: 'https://www.mediafire.com/file/lrplx2guoies3ns/xe+bay+đảo+thế+kỉ.zip/file',
+        name: 'Data xe bay đảo thế kỉ ✅',
+        url: 'https://plongdevs.github.io/dataxebay',
         img: 'img/pf/zip.png',
         descriptions: 'Dùng để tank bo giống bug lòng đất',
         size: '6 MB',
@@ -50,9 +50,27 @@ const datafile = [
 const Other = [
     {
         name: 'Termux 1.1.9_1 ✅',
-        url: 'https://www.mediafire.com/file/483k4jvlt1h0rlx/termux_1.1.9_1.apk/file',
+        url: 'https://plongdevs.github.io/termux',
         img: 'img/appicons/termux.png',
-        descriptions: 'Termux Newest Version'
+        descriptions: 'Termux Newest Version',
+        size: '107 MB',
+        updated: '16/11/2025'
+    },
+    {
+        name: 'MT Manager Vip 2.14.5-Clone ✅',
+        url: 'https://plongdevs.github.io/mtmanager.png',
+        img: 'img/appicons/mtvip.png',
+        descriptions: 'Ko đăng nhập tk hoặc cập nhật app tránh lỗi',
+        size: '22 MB',
+        updated: '16/11/2025'
+    },
+    {
+        name: 'NP Manager Vip ✅',
+        url: 'https://plongdevs.github.io/npvip',
+        img: 'img/appicons/npmanager.png',
+        descriptions: 'Vào app thì sẽ hiện dialog cập nhật vì vậy hãy tắt mạng trước khi dùng!',
+        size: '51 MB',
+        updated: '16/11/2025'
     }
 ];
 
