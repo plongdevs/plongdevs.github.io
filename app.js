@@ -67,11 +67,9 @@ const downloadIcon = `
     <line x1="12" y1="15" x2="12" y2="3"/>
 </svg>`;
 
-// ==========================
 // DOM ELEMENTS
-// ==========================
 const appContainer = document.querySelector('.app-section');
-const ksignContainer = document.querySelector('.ksign-section');
+const dataContainer = document.querySelector('.data-section'); // đổi tên
 const otherContainer = document.querySelector('.other-section');
 
 // ==========================
@@ -105,9 +103,9 @@ if (appContainer) {
     });
 }
 
-if (ksignContainer) {
+if (dataContainer) {
     datafile.forEach(app => {
-        ksignContainer.innerHTML += render(app);
+        dataContainer.innerHTML += render(app);
     });
 }
 
