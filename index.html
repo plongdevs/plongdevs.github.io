@@ -436,6 +436,8 @@ Mua đồ chơi adr-pc
 </div>
 <script>
   // Khởi chạy Vanilla Tilt
+  document.addEventListener("DOMContentLoaded", () => {
+  // Vanilla Tilt
   VanillaTilt.init(document.querySelectorAll(".project"), {
     max: 15,
     speed: 400,
@@ -443,12 +445,13 @@ Mua đồ chơi adr-pc
     "max-glare": 0.3,
   });
 
-  // Khởi chạy AOS
+  // AOS
   AOS.init({
     duration: 1000,
     easing: 'ease-in-out',
-    once: true, // chỉ animate 1 lần
+    once: true,
   });
+});
 
 
 const colors = [
