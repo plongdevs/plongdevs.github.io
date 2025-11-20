@@ -1,4 +1,4 @@
-// CONFIGURATION & DATA
+// CONFIGURATION
 const TYPING_CONFIG = {
     texts: ["Seller.", "Designer.", "Developer."],
     typingSpeed: 100,        // 1 ký tự mỗi 0.1 giây
@@ -28,11 +28,12 @@ function isInViewport(element) {
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
 }
-
 // TYPING ANIMATION
 function typeText() {
-    const currentText = TYPING_CONFIG.texts[textIndex];
     const typedTextElement = document.getElementById("typed-text");
+    if (!typedTextElement) return;
+
+    const currentText = TYPING_CONFIG.texts[textIndex];
 
     if (!isDeleting && charIndex < currentText.length) {
         typedTextElement.innerHTML = currentText.substring(0, charIndex + 1);
@@ -51,6 +52,12 @@ function typeText() {
         setTimeout(typeText, TYPING_CONFIG.typingSpeed);
     }
 }
+
+// START TYPING AFTER DOM LOAD
+document.addEventListener('DOMContentLoaded', () => {
+    typeText();
+});
+
 
 // SKILL BARS ANIMATION
 function animateSkillBars() {
