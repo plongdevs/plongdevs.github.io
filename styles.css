@@ -515,3 +515,28 @@ body {
 .snowflake:nth-of-type(9) .inner{animation-delay:3s}
 .snowflake:nth-of-type(10){left:25%;animation-delay:0s}
 .snowflake:nth-of-type(11){left:65%;animation-delay:2.5s}
+/* =========================================
+   FIX KÍCH CỠ RECAPTCHA TRÊN MOBILE
+   ========================================= */
+
+/* Mặc định trên máy tính thì giữ nguyên */
+.g-recaptcha {
+    transform-origin: center center;
+}
+
+/* Khi màn hình nhỏ hơn 400px (Điện thoại dọc) */
+@media screen and (max-width: 400px) {
+    .g-recaptcha {
+        transform: scale(0.85); /* Thu nhỏ còn 85% */
+        -webkit-transform: scale(0.85);
+        transform-origin: center center; /* Giữ nó nằm giữa */
+    }
+}
+
+/* Khi màn hình cực nhỏ (như iPhone 5/SE cũ) */
+@media screen and (max-width: 330px) {
+    .g-recaptcha {
+        transform: scale(0.75); /* Thu nhỏ mạnh hơn còn 75% */
+        -webkit-transform: scale(0.75);
+    }
+}
