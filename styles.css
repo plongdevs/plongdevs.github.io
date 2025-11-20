@@ -459,25 +459,6 @@ body {
 .snowflake:nth-of-type(9) .inner{animation-delay:3s}
 .snowflake:nth-of-type(10){left:25%;animation-delay:0s}
 .snowflake:nth-of-type(11){left:65%;animation-delay:2.5s}
-/* ---------------- Blur Overlay ---------------- */
-#blur-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    background: rgba(255, 255, 255, 0.3);
-    z-index: 999998;
-    transition: opacity 1.5s ease;
-}
-
-#blur-overlay.hide {
-    opacity: 0;
-    pointer-events: none;
-}
-
 /* ---------------- CAPTCHA Overlay ---------------- */
 #captcha-container {
     position: fixed;
@@ -502,6 +483,25 @@ body {
 
 #captcha-container.hide {
     display: none;
+}
+
+/* ---------------- Blur Overlay ---------------- */
+#blur-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.3);
+    z-index: 999998;
+    transition: opacity 1.5s ease;
+}
+
+#blur-overlay.hide {
+    opacity: 0;
+    pointer-events: none;
 }
 
 /* ---------------- Chặn chọn text ---------------- */
