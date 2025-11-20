@@ -8,7 +8,8 @@
     <title>PLongDev</title>
 
     <link href="styles.css" rel="stylesheet" />
-    <link href="app.css" rel="stylesheet" />
+    <link href="app.css"
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-cpp.min.js"></script>
@@ -123,19 +124,20 @@
         <!-- Projects Section -->
         <section class="projects-section" id="projects">
             <div class="prj-collum">
-                <div class="project">
+                <div class="project" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
                     <h3>Telegram Channel Notification</h3>
                     <a href="https://t.me/playping_chat" target="_blank">
                         <img src="./img/icons/redirect.png" alt="" />
                     </a>
                 </div>
-                <div class="project">
+                <div class="project" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
                     <h3>Box Chat Zalo</h3>
                     <a href="https://zalo.me/g/vruic971" target="_blank">
                         <img src="./img/icons/redirect.png" alt="" />
                     </a>
                 </div>
-                <div class="project">
+                <div class="project"
+data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
                     <h3>Box Chat Messenger</h3>
                     <a href="https://m.me/j/Abb7x2Ql4c0-_b_r/" target="_blank">
                         <img src="./img/icons/redirect.png" alt="Discord" />
@@ -222,6 +224,14 @@
 </div>
 
     <script>
+type="text/javascript" src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // Thời gian chuyển động
+    once: true,    // Chỉ chạy animation 1 lần
+  });
         const colors = [
             "#FF0000", "#00FF00", "#0000FF", "#FFFF00", "#FF00FF", "#00FFFF",
             "#000000", "#FFFFFF", "#808080", "#800000", "#008000", "#000080",
