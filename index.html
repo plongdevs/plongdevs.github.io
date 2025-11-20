@@ -18,6 +18,15 @@
 
 
 <link href="styles.css" rel="stylesheet" />
+<!-- Thêm vào <head> -->
+<!-- AOS CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+
+<!-- Vanilla Tilt JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+
+<!-- AOS JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
 <link href="app.css" rel="stylesheet" />
 
@@ -245,49 +254,32 @@ Mua đồ chơi adr-pc
 
 <!-- Projects Section -->
 
+<!-- Projects Section -->
 <section class="projects-section" id="projects">
+  <div class="prj-collum">
+    <div class="project" data-tilt data-tilt-max="15" data-tilt-speed="400" data-aos="fade-up">
+      <h3>Telegram Channel Notification</h3>
+      <a href="https://t.me/playping_chat" target="_blank">
+        <img src="./img/icons/redirect.png" alt="" />
+      </a>
+    </div>
 
-<div class="prj-collum">
+    <div class="project" data-tilt data-tilt-max="15" data-tilt-speed="400" data-aos="fade-up" data-aos-delay="100">
+      <h3>Box Chat Zalo</h3>
+      <a href="https://zalo.me/g/vruic971" target="_blank">
+        <img src="./img/icons/redirect.png" alt="" />
+      </a>
+    </div>
 
-<div class="project">
-
-<h3>Telegram Channel Notification</h3>
-
-<a href="https://t.me/playping_chat" target="_blank">
-
-<img src="./img/icons/redirect.png" alt="" />
-
-</a>
-
-</div>
-
-<div class="project">
-
-<h3>Box Chat Zalo</h3>
-
-<a href="https://zalo.me/g/vruic971" target="_blank">
-
-<img src="./img/icons/redirect.png" alt="" />
-
-</a>
-
-</div>
-
-<div class="project">
-
-<h3>Box Chat Messenger</h3>
-
-<a href="https://m.me/j/Abb7x2Ql4c0-_b_r/" target="_blank">
-
-<img src="./img/icons/redirect.png" alt="Discord" />
-
-</a>
-
-</div>
-
-</div>
-
+    <div class="project" data-tilt data-tilt-max="15" data-tilt-speed="400" data-aos="fade-up" data-aos-delay="200">
+      <h3>Box Chat Messenger</h3>
+      <a href="https://m.me/j/Abb7x2Ql4c0-_b_r/" target="_blank">
+        <img src="./img/icons/redirect.png" alt="" />
+      </a>
+    </div>
+  </div>
 </section>
+
 
 
 
@@ -442,10 +434,22 @@ Mua đồ chơi adr-pc
 <div class="snowflake"><div class="inner">❅</div></div>
 
 </div>
-
-
-
 <script>
+  // Khởi chạy Vanilla Tilt
+  VanillaTilt.init(document.querySelectorAll(".project"), {
+    max: 15,
+    speed: 400,
+    glare: true,
+    "max-glare": 0.3,
+  });
+
+  // Khởi chạy AOS
+  AOS.init({
+    duration: 1000,
+    easing: 'ease-in-out',
+    once: true, // chỉ animate 1 lần
+  });
+
 
 const colors = [
 
