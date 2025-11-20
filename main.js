@@ -96,16 +96,38 @@ function createSocialButtons() {
 }
 
 // DARK MODE TOGGLE
-function initializeDarkModeToggle() {
-    const colorModeButton = document.querySelector('#colorMode, .color-mode, [data-color-mode]');
-    if (!colorModeButton) return;
-    colorModeButton.addEventListener('click', toggleDarkMode);
-}
-
+// DARK MODE TOGGLE (ĐÃ SỬA: Không can thiệp vào style nền, trả lại quyền cho CSS)
 function toggleDarkMode() {
     const body = document.body;
-    const currentDarkMode = parseInt(getComputedStyle(body).getPropertyValue("--dark-mode"));
-    const isDarkMode = Boolean(currentDarkMode);
+    
+    // Chỉ đơn giản là bật/tắt class "dark-mode"
+    body.classList.toggle('dark-mode');
+    
+    // Lưu trạng thái vào bộ nhớ
+    const isDark = body.classList.contains('dark-mode');
+    localStorage.setItem('darkMode', isDark);
+    
+    // (Tùy chọn) Nếu muốn đổi màu các icon SVG ngay lập tức
+    const svg1 = document.querySelector('.svg1');
+    if (svg1) svg1.style.fill = isDark ? '#1a1a1a' : '#fff'; 
+}
+
+function initializeDarkModeToggle() {
+    const colorModeButton = document.querySelector('#colorMode, .color-mode');
+    if (!colorModeButton) return;
+
+    // Xử lý khi click
+    colorModeButton.addEventListener('click', toggleDarkMode);
+
+    // Kiểm tra trạng thái cũ khi load trang
+    const savedMode = localStorage.getItem('darkMode');
+    if (savedMode === 'true') {
+        document.body.classList.add('dark-mode');
+        // Cập nhật icon SVG nếu cần thiết khi load
+        const svg1 = document.querySelector('.svg1');
+        if (svg1) svg1.style.fill = '#1a1a1a';
+    }
+}
 
     body.style.setProperty("--dark-mode", 1 - currentDarkMode);
     body.style.color = isDarkMode ? 'black' : 'white';
