@@ -275,10 +275,6 @@
 
         updateClock();
         setInterval(updateClock, 1000);
-        // Nếu người dùng reload mà captcha chưa được xác nhận → không cho thấy trang
-        window.onload = () => {
-            document.getElementById('blur-overlay').style.opacity = "1";
-        };
     </script>
 </body>
 
