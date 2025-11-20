@@ -3,30 +3,74 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>PLongDev</title>
 
     <link href="styles.css" rel="stylesheet" />
     <link href="app.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-cpp.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-java.min.js"></script>
 
+    <!-- reCAPTCHA v2 -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <style>
+        /* Overlay blur */
+        #blur-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.3);
+            z-index: 999999;
+            transition: opacity 1.5s ease;
+        }
+        #blur-overlay.hide {
+            opacity: 0;
+            pointer-events: none;
+        }
+        /* Overlay captcha */
+        #captcha-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(20, 20, 20, 0.85);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            z-index: 1000000;
+        }
+        #captcha-container h2 {
+            color: white;
+            font-size: 20px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        #captcha-container.hide {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
+    <!-- CAPTCHA Overlay -->
     <div id="captcha-container">
-        <h2>Vui lòng xác minh reCaptcha để vào web</h2>
+        <h2>Xác minh trước khi truy cập website của tôi</h2>
         <div class="g-recaptcha" data-sitekey="6LeS1RIsAAAAANhdJgVL6mei8RsNMlezgxSeVkhh" data-callback="captchaVerified"></div>
     </div>
-
+    <!-- Blur overlay -->
     <div id="blur-overlay"></div>
 
+    <!-- Navbar -->
+    <!-- Các phần còn lại của trang -->
     <header>
         <nav class="navbar box-shadow">
             <div class="th"></div>
@@ -49,19 +93,21 @@
         </nav>
     </header>
 
+    <!-- Main Section -->
     <main>
-
+        <!-- Profile Section -->
         <section class="about-section" id="about">
-            <div class="padding profile" data-aos="fade-up"> <img class="profile-pic box-shadow" src="./img/pf/profile-pic.png" alt="Profile Picture" />
+            <div class="padding profile">
+                <img class="profile-pic box-shadow" src="./img/pf/profile-pic.png" alt="Profile Picture" />
                 <h2 style="margin-bottom:0;">Hi, this is</h2>
                 <h1 style="margin-top:0;">
                     Pham Long
                     <img src="./img/icons/badge.png" alt="" style="height:28px;" />
                 </h1>
                 <div class="typing">
-    and I'm a <span id="typed-text"></span><span class="cursor">|</span>
-</div>
-
+                    and I'm a <span id="typed-text"></span><span class="cursor">|</span>
+                </div>
+                <div class="typing">and I'm a <span id="typed-text"></span><span class="cursor">|</span></div>
                 <div id="clock" style="text-align:center; font-size:28px; margin-top:15px; font-weight:bold;"></div>
                 <p class="prose-heading">
                     Mua đồ chơi adr-pc
@@ -70,22 +116,22 @@
                 <div class="social-buttons"></div>
             </div>
         </section>
-
-        <section class="projects-section" id="projects" data-aos="fade-up"> <div class="prj-collum" data-aos="zoom-in"> <div class="project">
+        <!-- Projects Section -->
+        <section class="projects-section" id="projects">
+            <div class="prj-collum">
+                <div class="project">
                     <h3>Telegram Channel Notification</h3>
                     <a href="https://t.me/playping_chat" target="_blank">
                         <img src="./img/icons/redirect.png" alt="" />
                     </a>
                 </div>
-            </div>
-            <div class="prj-collum" data-aos="zoom-in" data-aos-delay="100"> <div class="project">
+                <div class="project">
                     <h3>Box Chat Zalo</h3>
                     <a href="https://zalo.me/g/vruic971" target="_blank">
                         <img src="./img/icons/redirect.png" alt="" />
                     </a>
                 </div>
-            </div>
-            <div class="prj-collum" data-aos="zoom-in" data-aos-delay="200"> <div class="project">
+                <div class="project">
                     <h3>Box Chat Messenger</h3>
                     <a href="https://m.me/j/Abb7x2Ql4c0-_b_r/" target="_blank">
                         <img src="./img/icons/redirect.png" alt="Discord" />
@@ -94,73 +140,78 @@
             </div>
         </section>
 
-        <h2 id="app" style="text-align:center;" data-aos="fade-right">FakeLag</h2> <section class="app-section" data-aos="fade-up"></section> <div class="line" data-aos="fade-left"></div> <h2 style="text-align:center; margin-top:5em;" data-aos="fade-right">Data</h2> <div class="data-section" data-aos="fade-up"></div> <div class="line" data-aos="fade-left"></div> <h2 style="text-align:center; margin-top:5em;" data-aos="fade-right">Other</h2> <div class="other-section" data-aos="fade-up"></div> <div class="wave-container" id="wave1" data-aos="fade-up"> <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+        <!-- App Section -->
+        <h2 id="app" style="text-align:center;">FakeLag</h2>
+        <section class="app-section"></section>
+        <div class="line"></div>
+        <h2 style="text-align:center; margin-top:5em;">Data</h2>
+        <div class="data-section"></div>
+        <div class="line"></div>
+        <h2 style="text-align:center; margin-top:5em;">Other</h2>
+        <div class="other-section"></div>
+        <!-- Wave SVG -->
+        <div class="wave-container" id="wave1">
+            <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
                 <path class="svg1" d="M0,288L48,272C96,256,192,224,288,213.3C384,203,480,213,576,213.3C672,213,768,203,864,192C960,181,1056,171,1152,165.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" fill="#fff" fill-opacity="1"></path>
             </svg>
         </div>
-
-        <section class="skills-section" id="skills" data-aos="fade-up"> <h2>Programming Language Skills</h2>
-            <div class="skill" data-aos="fade-right"> <span>HTML/CSS/JS</span>
+        <!-- Skills Section -->
+        <section class="skills-section" id="skills">
+            <h2>Programming Language Skills</h2>
+            <div class="skill">
+                <span>HTML/CSS/JS</span>
                 <div class="skill-bar">
                     <div class="skill-fill" data-percent="76%" style="background-color:#e34c26;"></div>
                 </div>
             </div>
-            <div class="skill" data-aos="fade-right" data-aos-delay="100"> <span>Python</span>
+            <div class="skill">
+                <span>Python</span>
                 <div class="skill-bar">
                     <div class="skill-fill" data-percent="68%" style="background-color:#1f5af9;"></div>
                 </div>
             </div>
-            <div class="skill" data-aos="fade-right" data-aos-delay="200"> <span>Java</span>
+            <div class="skill">
+                <span>Java</span>
                 <div class="skill-bar">
                     <div class="skill-fill" data-percent="43%" style="background-color:#89a5f3;"></div>
                 </div>
             </div>
-            <div class="skill" data-aos="fade-right" data-aos-delay="300"> <span>C/C++</span>
+            <div class="skill">
+                <span>C/C++</span>
                 <div class="skill-bar">
                     <div class="skill-fill" data-percent="21%" style="background-color:#f29111;"></div>
                 </div>
             </div>
         </section>
-
-        <section class="contact-section" id="contact" data-aos="fade-up"> <h2>Contact Me</h2>
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+            <h2>Contact Me</h2>
             <p>Gmail: <strong>phamlongsoftware@gmail.com</strong></p>
         </section>
+        <!-- Bạn giữ nguyên các phần còn lại -->
+        <!-- ... (Các section khác không thay đổi) ... -->
+
     </main>
 
-    <div class="snowflakes" aria-hidden="true">
-        <div class="snowflake"><div class="inner">❅</div></div>
-        <div class="snowflake"><div class="inner">❅</div></div>
-        <div class="snowflake"><div class="inner">❅</div></div>
-        <div class="snowflake"><div class="inner">❅</div></div>
-        <div class="snowflake"><div class="inner">❅</div></div>
-        <div class="snowflake"><div class="inner">❅</div></div>
-        <div class="snowflake"><div class="inner">❅</div></div>
-        <div class="snowflake"><div class="inner">❅</div></div>
-        <div class="snowflake"><div class="inner">❅</div></div>
-        <div class="snowflake"><div class="inner">❅</div></div>
-        <div class="snowflake"><div class="inner">❅</div></div>
-        <div class="snowflake"><div class="inner">❅</div></div>
-    </div>
+    <script src="main.js"></script>
+    <script src="app.js"></script>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Script đồng hồ -->
+	<div class="snowflakes" aria-hidden="true">
+  <div class="snowflake"><div class="inner">❅</div></div>
+  <div class="snowflake"><div class="inner">❅</div></div>
+  <div class="snowflake"><div class="inner">❅</div></div>
+  <div class="snowflake"><div class="inner">❅</div></div>
+  <div class="snowflake"><div class="inner">❅</div></div>
+  <div class="snowflake"><div class="inner">❅</div></div>
+  <div class="snowflake"><div class="inner">❅</div></div>
+  <div class="snowflake"><div class="inner">❅</div></div>
+  <div class="snowflake"><div class="inner">❅</div></div>
+  <div class="snowflake"><div class="inner">❅</div></div>
+  <div class="snowflake"><div class="inner">❅</div></div>
+  <div class="snowflake"><div class="inner">❅</div></div>
+</div>
     <script>
-      AOS.init({
-        duration: 1000,
-        once: true,
-      });
-    </script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
-    <script>
-        VanillaTilt.init(document.querySelectorAll(".prj-collum, .profile-pic"), {
-            max: 15,    // Độ nghiêng tối đa (từ 0-180)
-            speed: 400, // Tốc độ nghiêng
-            glare: true, // Thêm hiệu ứng bóng loáng
-            "max-glare": 0.2, // Độ sáng tối đa của bóng loáng (0-1)
-        });
-    </script>
-
-    <script src="main.js"></script> <script src="app.js"></script>  <script>
         const colors = [
             "#FF0000", "#00FF00", "#0000FF", "#FFFF00", "#FF00FF", "#00FFFF",
             "#000000", "#FFFFFF", "#808080", "#800000", "#008000", "#000080",
@@ -172,19 +223,14 @@
             "#8B0000", "#556B2F", "#483D8B", "#2F4F4F", "#9400D3", "#4B0082",
             "#00CED1", "#4682B4", "#D2691E", "#DC143C", "#FF1493", "#00BFFF"
         ];
-
         let colorIndex = 0;
-
         function getVNTime() {
             const now = new Date();
             const utc = now.getTime() + now.getTimezoneOffset() * 60000;
             return new Date(utc + 7 * 3600000);
-        }
-
         // ReCAPTCHA callback
         function captchaVerified() {
             document.getElementById('captcha-container').classList.add('hide');
-
             setTimeout(() => {
                 const overlay = document.getElementById('blur-overlay');
                 overlay.classList.add('hide');
@@ -201,17 +247,21 @@
             const mo = (vnTime.getMonth() + 1).toString().padStart(2, '0');
             const y = vnTime.getFullYear();
             const clockEl = document.getElementById('clock');
-            if(clockEl) {
-                clockEl.textContent = `${d}/${mo}/${y} ${h}:${m}:${s}`;
-                clockEl.style.color = colors[colorIndex];
-            }
+            clockEl.textContent = `${d}/${mo}/${y} ${h}:${m}:${s}`;
+            clockEl.style.color = colors[colorIndex];
             colorIndex = (colorIndex + 1) % colors.length;
         }
-
-        // Chạy đồng hồ ngay lập tức
         updateClock();
-        // Cập nhật mỗi giây
         setInterval(updateClock, 1000);
+        window.addEventListener('load', () => {
+            const overlay = document.getElementById('blur-overlay');
+            overlay.classList.add('hide');
+            setTimeout(() => overlay.remove(), 1500);
+        });
+        // Nếu người dùng reload mà captcha chưa được xác nhận → không cho thấy trang
+        window.onload = () => {
+            document.getElementById('blur-overlay').style.opacity = "1";
+        };
     </script>
 </body>
 </html>
