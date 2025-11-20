@@ -1,20 +1,36 @@
 /* General Styles */
+/* 1. Mặc định (Light Mode) - Sẽ chạy Gradient 7 màu */
 body {
-    font-family: ui-sans-serif, system-ui, sans-serif,
-                 Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    font-family: ui-sans-serif, system-ui, sans-serif;
     margin: 0;
     padding: 0;
-    /* Hiệu ứng nền động Gradient */
+    width: 100%;
+    overflow-x: hidden;
+    
+    /* QUAN TRỌNG: Định nghĩa Gradient Animation ở đây */
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite; /* Chú ý: Đã đổi tên animation cho rõ ràng */
-    color: #333; /* Màu chữ mặc định */
+    animation: gradientBG 15s ease infinite;
+    
+    color: #333;
+    transition: color 0.5s ease; /* Chỉ transition màu chữ, background để animation lo */
 }
 
 @keyframes gradientBG {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
+}
+
+/* 2. Chế độ tối (Dark Mode) - Ghi đè màu nền */
+body.dark-mode {
+    /* Khi có class này, background này sẽ đè lên background gradient ở trên */
+    background: #1a1a1a; 
+    /* Hoặc nếu muốn gradient tối thì dùng dòng dưới: */
+    /* background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364); */
+    
+    color: #fff;
+    animation: none; /* Tắt chuyển động nền khi ở chế độ tối cho đỡ rối mắt (tuỳ bạn chọn) */
 }
 
 
