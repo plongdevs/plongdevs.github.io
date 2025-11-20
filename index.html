@@ -161,7 +161,7 @@ display: none;
 
 <header>
 
-<nav class="navbar box-shadow">
+<nav class="navbar box-shadow" data-aos="fade-down">
 
 <div class="th"></div>
 
@@ -211,11 +211,12 @@ display: none;
 
 <!-- Profile Section -->
 
-<section class="about-section" id="about">
+<section class="about-section" id="about" data-aos="fade-up">
 
 <div class="padding profile">
 
-<img class="profile-pic box-shadow" src="./img/pf/profile-pic.png" alt="Profile Picture" />
+<img class="profile-pic box-shadow" src="./img/pf/profile-pic.png" data-aos="zoom-in">
+ />
 
 <h2 style="margin-bottom:0;">Hi, this is</h2>
 
@@ -322,7 +323,8 @@ Mua đồ chơi adr-pc
 
 <!-- Skills Section -->
 
-<section class="skills-section" id="skills">
+<section class="skills-section" id="skills" data-aos="fade-up">
+
 
 <h2>Programming Language Skills</h2>
 
@@ -380,7 +382,8 @@ Mua đồ chơi adr-pc
 
 <!-- Contact Section -->
 
-<section class="contact-section" id="contact">
+<section class="contact-section" id="contact" data-aos="fade-up">
+
 
 <h2>Contact Me</h2>
 
@@ -436,8 +439,14 @@ Mua đồ chơi adr-pc
 <script>
   // Khởi chạy Vanilla Tilt
   document.addEventListener("DOMContentLoaded", () => {
-  AOS.init();
+  AOS.init({
+    duration: 800,
+    easing: 'ease-in-out',
+    once: true,
+    offset: 50
+  });
 });
+
 
 
 
