@@ -1,3 +1,16 @@
+index.html
+1 file changed
++49
+-155
+lines changed
+Search within code
+ 
+‎index.html‎
++49
+-155
+Lines changed: 49 additions & 155 deletions
+Original file line number	Diff line number	Diff line change
+@@ -1,237 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,17 +23,15 @@
     <link href="styles.css" rel="stylesheet" />
     <link href="app.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="snow.css">
 	<link rel="stylesheet" href="snow.css">
+    <link rel="stylesheet" href="snow.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-cpp.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-java.min.js"></script>
 
     <!-- reCAPTCHA v2 -->
-    <!-- reCAPTCHA -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
     <style>
         /* Overlay blur */
         #blur-overlay {
@@ -40,7 +51,6 @@
             pointer-events: none;
         }
         /* Overlay captcha */
-        /* Captcha Overlay */
         #captcha-container {
             position: fixed;
             top: 0;
@@ -48,7 +58,6 @@
             width: 100%;
             height: 100%;
             background: rgba(20, 20, 20, 0.85);
-            background: rgba(15, 15, 15, 0.9);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -69,18 +78,15 @@
 
 <body>
     <!-- CAPTCHA Overlay -->
-    <!-- CAPTCHA -->
     <div id="captcha-container">
         <h2>Xác minh trước khi truy cập website của tôi</h2>
-        <h2>Vui lòng xác minh để tiếp tục truy cập</h2>
         <div class="g-recaptcha" data-sitekey="6LeS1RIsAAAAANhdJgVL6mei8RsNMlezgxSeVkhh" data-callback="captchaVerified"></div>
     </div>
-
     <!-- Blur overlay -->
     <div id="blur-overlay"></div>
 
-    <!-- Các phần còn lại của trang -->
     <!-- Navbar -->
+    <!-- Các phần còn lại của trang -->
     <header>
         <nav class="navbar box-shadow">
             <div class="th"></div>
@@ -114,10 +120,10 @@
                     Pham Long
                     <img src="./img/icons/badge.png" alt="" style="height:28px;" />
                 </h1>
-                <div class="typing">and I'm a <span id="typed-text"></span><span class="cursor">|</span></div>
                 <div class="typing">
                     and I'm a <span id="typed-text"></span><span class="cursor">|</span>
                 </div>
+                <div class="typing">and I'm a <span id="typed-text"></span><span class="cursor">|</span></div>
                 <div id="clock" style="text-align:center; font-size:28px; margin-top:15px; font-weight:bold;"></div>
                 <p class="prose-heading">
                     Mua đồ chơi adr-pc
@@ -149,6 +155,7 @@
                 </div>
             </div>
         </section>
+
         <!-- App Section -->
         <h2 id="app" style="text-align:center;">FakeLag</h2>
         <section class="app-section"></section>
@@ -192,14 +199,13 @@
                 </div>
             </div>
         </section>
-
-        <!-- Bạn giữ nguyên các phần còn lại -->
-        <!-- ... (Các section khác không thay đổi) ... -->
         <!-- Contact Section -->
         <section class="contact-section" id="contact">
             <h2>Contact Me</h2>
             <p>Gmail: <strong>phamlongsoftware@gmail.com</strong></p>
         </section>
+        <!-- Bạn giữ nguyên các phần còn lại -->
+        <!-- ... (Các section khác không thay đổi) ... -->
 
     </main>
 
@@ -222,7 +228,6 @@
   <div class="snowflake"><div class="inner">❅</div></div>
 </div>
     <script>
-        // ReCAPTCHA callback
         const colors = [
             "#FF0000", "#00FF00", "#0000FF", "#FFFF00", "#FF00FF", "#00FFFF",
             "#000000", "#FFFFFF", "#808080", "#800000", "#008000", "#000080",
@@ -239,7 +244,16 @@
             const now = new Date();
             const utc = now.getTime() + now.getTimezoneOffset() * 60000;
             return new Date(utc + 7 * 3600000);
+        // ReCAPTCHA callback
+        function captchaVerified() {
+            document.getElementById('captcha-container').classList.add('hide');
+            setTimeout(() => {
+                const overlay = document.getElementById('blur-overlay');
+                overlay.classList.add('hide');
+                setTimeout(() => overlay.remove(), 1500);
+            }, 300);
         }
+
         function updateClock() {
             const vnTime = getVNTime();
             const h = vnTime.getHours().toString().padStart(2, '0');
@@ -255,22 +269,15 @@
         }
         updateClock();
         setInterval(updateClock, 1000);
-        // reCAPTCHA callback
-        function captchaVerified() {
-            document.getElementById('captcha-container').classList.add('hide');
-            setTimeout(() => {
-                const overlay = document.getElementById('blur-overlay');
-                overlay.classList.add('hide');
-                setTimeout(() => overlay.remove(), 1500);
-            }, 300);
-        }
-
+        window.addEventListener('load', () => {
+            const overlay = document.getElementById('blur-overlay');
+            overlay.classList.add('hide');
+            setTimeout(() => overlay.remove(), 1500);
+        });
         // Nếu người dùng reload mà captcha chưa được xác nhận → không cho thấy trang
         window.onload = () => {
-        window.addEventListener('load', () => {
             document.getElementById('blur-overlay').style.opacity = "1";
         };
-        });
     </script>
 </body>
 </html>
