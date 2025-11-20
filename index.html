@@ -238,26 +238,27 @@
             "#00CED1", "#4682B4", "#D2691E", "#DC143C", "#FF1493", "#00BFFF"
         ];
 
-        let colorIndex = 0;
-
+        let colorIndex = 0;  
         function getVNTime() {
             const now = new Date();
             const utc = now.getTime() + now.getTimezoneOffset() * 60000;
             return new Date(utc + 7 * 3600000);
-        // ReCAPTCHA callback
+        } // <--- Đã thêm dấu đóng ngoặc nhọn này!
+
+        // ReCAPTCHA callback (Đã đặt ở vị trí độc lập)
         function captchaVerified() {
-    // Ẩn lớp chứa reCAPTCHA (captcha-container)
-    document.getElementById('captcha-container').classList.add('hide'); 
+            // Ẩn lớp chứa reCAPTCHA (captcha-container)
+            document.getElementById('captcha-container').classList.add('hide'); 
 
-    // Đợi một chút rồi bắt đầu ẩn lớp mờ (blur-overlay)
-    setTimeout(() => {
-        const overlay = document.getElementById('blur-overlay');
-        overlay.classList.add('hide'); 
+            // Đợi một chút rồi bắt đầu ẩn lớp mờ (blur-overlay)
+            setTimeout(() => {
+                const overlay = document.getElementById('blur-overlay');
+                overlay.classList.add('hide'); 
 
-        // Sau khi hiệu ứng chuyển tiếp hoàn tất, loại bỏ lớp phủ khỏi DOM
-        setTimeout(() => overlay.remove(), 1500); 
-    }, 300);
-}
+                // Sau khi hiệu ứng chuyển tiếp hoàn tất, loại bỏ lớp phủ khỏi DOM
+                setTimeout(() => overlay.remove(), 1500); 
+            }, 300);
+        }
 
         function updateClock() {
             const vnTime = getVNTime();
