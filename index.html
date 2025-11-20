@@ -7,11 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>PLongDev</title>
 
-    <!-- Link CSS -->
+    <!-- CSS -->
     <link href="style.css" rel="stylesheet" />
     <link href="app.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="snow.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
 
     <!-- Prism JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
@@ -42,12 +42,12 @@
                 <li><a href="#app">Application</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li style="display: flex; width: 26px;">
+                <li>
                     <svg class="color-mode" id="colorMode" viewBox="0 0 400 400" width="30" height="30">
                         <circle cx="200" cy="200" r="195" fill="white" stroke="#000" stroke-width="10"></circle>
-                        <path d="M 200 375 A 175 175 0 0 1 200 25"></path>
+                        <path d="M 200 375 A 175 175 0 0 1 200 25" stroke="#000" fill="none"></path>
                         <path d="M 200 300 A 100 100 0 0 1 200 100" fill="#FFF"></path>
-                        <path d="M 200 100 A 100 100 180 0 1 200 300"></path>
+                        <path d="M 200 100 A 100 100 180 0 1 200 300" stroke="#000" fill="none"></path>
                     </svg>
                 </li>
             </ul>
@@ -55,10 +55,9 @@
         </nav>
     </header>
 
-    <!-- Main Section -->
+    <!-- Main -->
     <main>
-
-        <!-- Profile Section -->
+        <!-- About -->
         <section class="about-section" id="about">
             <div class="padding profile">
                 <img class="profile-pic box-shadow" src="./img/pf/profile-pic.png" alt="Profile Picture" />
@@ -79,43 +78,46 @@
             </div>
         </section>
 
-        <!-- Projects Section -->
+        <!-- Projects -->
         <section class="projects-section" id="projects">
             <div class="prj-collum">
                 <div class="project">
                     <h3>Telegram Channel Notification</h3>
                     <a href="https://t.me/playping_chat" target="_blank">
-                        <img src="./img/icons/redirect.png" alt="" />
+                        <img src="./img/icons/redirect.png" alt="Redirect" />
                     </a>
                 </div>
                 <div class="project">
                     <h3>Box Chat Zalo</h3>
                     <a href="https://zalo.me/g/vruic971" target="_blank">
-                        <img src="./img/icons/redirect.png" alt="" />
+                        <img src="./img/icons/redirect.png" alt="Redirect" />
                     </a>
                 </div>
                 <div class="project">
                     <h3>Box Chat Messenger</h3>
                     <a href="https://m.me/j/Abb7x2Ql4c0-_b_r/" target="_blank">
-                        <img src="./img/icons/redirect.png" alt="Discord" />
+                        <img src="./img/icons/redirect.png" alt="Redirect" />
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- App Section -->
-        <h2 id="app" style="text-align:center;">FakeLag</h2>
-        <section class="app-section"></section>
+        <!-- App -->
+        <section class="app-section" id="app">
+            <h2 style="text-align:center;">FakeLag</h2>
+        </section>
 
-        <div class="line"></div>
-        <h2 style="text-align:center; margin-top:5em;">Data</h2>
-        <div class="data-section"></div>
+        <!-- Data -->
+        <section class="data-section">
+            <h2 style="text-align:center; margin-top:5em;">Data</h2>
+        </section>
 
-        <div class="line"></div>
-        <h2 style="text-align:center; margin-top:5em;">Other</h2>
-        <div class="other-section"></div>
+        <!-- Other -->
+        <section class="other-section">
+            <h2 style="text-align:center; margin-top:5em;">Other</h2>
+        </section>
 
-        <!-- Wave SVG -->
+        <!-- Wave -->
         <div class="wave-container" id="wave1">
             <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
                 <path class="svg1"
@@ -124,7 +126,7 @@
             </svg>
         </div>
 
-        <!-- Skills Section -->
+        <!-- Skills -->
         <section class="skills-section" id="skills">
             <h2>Programming Language Skills</h2>
             <div class="skill">
@@ -153,47 +155,37 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
+        <!-- Contact -->
         <section class="contact-section" id="contact">
             <h2>Contact Me</h2>
             <p>Gmail: <strong>phamlongsoftware@gmail.com</strong></p>
         </section>
-
     </main>
 
     <!-- Snowflakes -->
     <div class="snowflakes" aria-hidden="true">
-        <div class="snowflake"><div class="inner">❅</div></div>
-        <div class="snowflake"><div class="inner">❅</div></div>
-        <div class="snowflake"><div class="inner">❅</div></div>
-        <div class="snowflake"><div class="inner">❅</div></div>
-        <div class="snowflake"><div class="inner">❅</div></div>
-        <div class="snowflake"><div class="inner">❅</div></div>
-        <div class="snowflake"><div class="inner">❅</div></div>
-        <div class="snowflake"><div class="inner">❅</div></div>
-        <div class="snowflake"><div class="inner">❅</div></div>
-        <div class="snowflake"><div class="inner">❅</div></div>
-        <div class="snowflake"><div class="inner">❅</div></div>
-        <div class="snowflake"><div class="inner">❅</div></div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❅</div>
     </div>
 
     <!-- JS -->
     <script src="main.js"></script>
     <script src="app.js"></script>
 
-    <!-- Clock & Blur & CAPTCHA -->
     <script>
-        // ReCAPTCHA callback
         function captchaVerified() {
             document.getElementById('captcha-container').classList.add('hide');
-            setTimeout(() => {
-                const overlay = document.getElementById('blur-overlay');
-                overlay.classList.add('hide');
-                setTimeout(() => overlay.remove(), 1500);
-            }, 500);
+            const overlay = document.getElementById('blur-overlay');
+            overlay.classList.add('hide');
+            setTimeout(() => overlay.remove(), 1500);
         }
 
-        // Clock
         const colors = ["#FF0000","#00FF00","#0000FF","#FFFF00","#FF00FF","#00FFFF","#000000","#FFFFFF","#808080","#800000","#008000","#000080","#FFB3BA","#FFDFBA","#FFFFBA","#BAFFC9","#BAE1FF","#D1C4E9","#F8BBD0","#C8E6C9","#FFCCBC","#FFE0B2","#39FF14","#F700FF","#FF073A","#0FFFDC","#FFDC00","#FF6EC7","#FF7F50","#FF4500","#FFD700","#ADFF2F","#00FA9A","#00CED1","#1E90FF","#BA55D3","#FF69B4","#FFA07A","#7B68EE","#3CB371","#8B0000","#556B2F","#483D8B","#2F4F4F","#9400D3","#4B0082","#00CED1","#4682B4","#D2691E","#DC143C","#FF1493","#00BFFF"];
         let colorIndex = 0;
 
@@ -219,20 +211,13 @@
         updateClock();
         setInterval(updateClock, 1000);
 
-        // Hide blur on load if CAPTCHA already verified
-        window.addEventListener('load', () => {
-            const overlay = document.getElementById('blur-overlay');
-            // overlay.classList.add('hide'); // Đợi CAPTCHA
-        });
-
-        // Ẩn source: chuột phải & phím
+        // Block right click & devtools
         document.addEventListener('contextmenu', e => e.preventDefault());
         document.addEventListener('keydown', function(e) {
-            if(e.key === "F12") e.preventDefault();
-            if((e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') || (e.metaKey && e.altKey && e.key.toLowerCase() === 'i')) e.preventDefault();
+            if(["F12"].includes(e.key)) e.preventDefault();
+            if((e.ctrlKey && e.shiftKey && ["I","C"].includes(e.key.toUpperCase()))) e.preventDefault();
             if(e.ctrlKey && e.key.toLowerCase() === 'u') e.preventDefault();
         });
     </script>
-
 </body>
 </html>
