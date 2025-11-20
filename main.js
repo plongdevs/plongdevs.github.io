@@ -1,8 +1,8 @@
-// CONFIGURATION
+// CONFIGURATION & DATA
 const TYPING_CONFIG = {
     texts: ["Seller.", "Designer.", "Developer."],
-    typingSpeed: 100,        // 1 ký tự mỗi 0.1 giây
-    deletingSpeed: 50,       // xóa chậm hơn
+    typingSpeed: 100,        // 1 kĂ½ tá»± má»—i 0.1 giĂ¢y
+    deletingSpeed: 50,       // xĂ³a cháº­m hÆ¡n
     pauseBeforeDeleting: 2000
 };
 
@@ -28,12 +28,11 @@ function isInViewport(element) {
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
     );
 }
+
 // TYPING ANIMATION
 function typeText() {
-    const typedTextElement = document.getElementById("typed-text");
-    if (!typedTextElement) return;
-
     const currentText = TYPING_CONFIG.texts[textIndex];
+    const typedTextElement = document.getElementById("typed-text");
 
     if (!isDeleting && charIndex < currentText.length) {
         typedTextElement.innerHTML = currentText.substring(0, charIndex + 1);
@@ -52,12 +51,6 @@ function typeText() {
         setTimeout(typeText, TYPING_CONFIG.typingSpeed);
     }
 }
-
-// START TYPING AFTER DOM LOAD
-document.addEventListener('DOMContentLoaded', () => {
-    typeText();
-});
-
 
 // SKILL BARS ANIMATION
 function animateSkillBars() {
@@ -103,38 +96,16 @@ function createSocialButtons() {
 }
 
 // DARK MODE TOGGLE
-// DARK MODE TOGGLE (ĐÃ SỬA: Không can thiệp vào style nền, trả lại quyền cho CSS)
+function initializeDarkModeToggle() {
+    const colorModeButton = document.querySelector('#colorMode, .color-mode, [data-color-mode]');
+    if (!colorModeButton) return;
+    colorModeButton.addEventListener('click', toggleDarkMode);
+}
+
 function toggleDarkMode() {
     const body = document.body;
-    
-    // Chỉ đơn giản là bật/tắt class "dark-mode"
-    body.classList.toggle('dark-mode');
-    
-    // Lưu trạng thái vào bộ nhớ
-    const isDark = body.classList.contains('dark-mode');
-    localStorage.setItem('darkMode', isDark);
-    
-    // (Tùy chọn) Nếu muốn đổi màu các icon SVG ngay lập tức
-    const svg1 = document.querySelector('.svg1');
-    if (svg1) svg1.style.fill = isDark ? '#1a1a1a' : '#fff'; 
-}
-
-function initializeDarkModeToggle() {
-    const colorModeButton = document.querySelector('#colorMode, .color-mode');
-    if (!colorModeButton) return;
-
-    // Xử lý khi click
-    colorModeButton.addEventListener('click', toggleDarkMode);
-
-    // Kiểm tra trạng thái cũ khi load trang
-    const savedMode = localStorage.getItem('darkMode');
-    if (savedMode === 'true') {
-        document.body.classList.add('dark-mode');
-        // Cập nhật icon SVG nếu cần thiết khi load
-        const svg1 = document.querySelector('.svg1');
-        if (svg1) svg1.style.fill = '#1a1a1a';
-    }
-}
+    const currentDarkMode = parseInt(getComputedStyle(body).getPropertyValue("--dark-mode"));
+    const isDarkMode = Boolean(currentDarkMode);
 
     body.style.setProperty("--dark-mode", 1 - currentDarkMode);
     body.style.color = isDarkMode ? 'black' : 'white';
