@@ -1,36 +1,20 @@
 /* General Styles */
-/* 1. Mặc định (Light Mode) - Sẽ chạy Gradient 7 màu */
 body {
-    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-family: ui-sans-serif, system-ui, sans-serif,
+                 Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
     margin: 0;
     padding: 0;
-    width: 100%;
-    overflow-x: hidden;
-    
-    /* QUAN TRỌNG: Định nghĩa Gradient Animation ở đây */
+    /* Hiệu ứng nền động Gradient */
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
-    
-    color: #333;
-    transition: color 0.5s ease; /* Chỉ transition màu chữ, background để animation lo */
+    animation: gradientBG 15s ease infinite; /* Chú ý: Đã đổi tên animation cho rõ ràng */
+    color: #333; /* Màu chữ mặc định */
 }
 
 @keyframes gradientBG {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
-}
-
-/* 2. Chế độ tối (Dark Mode) - Ghi đè màu nền */
-body.dark-mode {
-    /* Khi có class này, background này sẽ đè lên background gradient ở trên */
-    background: #1a1a1a; 
-    /* Hoặc nếu muốn gradient tối thì dùng dòng dưới: */
-    /* background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364); */
-    
-    color: #fff;
-    animation: none; /* Tắt chuyển động nền khi ở chế độ tối cho đỡ rối mắt (tuỳ bạn chọn) */
 }
 
 
@@ -428,8 +412,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100wh;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background: rgba(20, 20, 20, 0.85);
     display: flex;
     justify-content: center;
@@ -515,19 +499,3 @@ body {
 .snowflake:nth-of-type(9) .inner{animation-delay:3s}
 .snowflake:nth-of-type(10){left:25%;animation-delay:0s}
 .snowflake:nth-of-type(11){left:65%;animation-delay:2.5s}
-/* =========================================
-   FIX KÍCH CỠ RECAPTCHA TRÊN MOBILE
-   ========================================= */
-
-/* Mặc định trên máy tính thì giữ nguyên */
-.g-recaptcha {
-    transform-origin: center center;
-    width: 100% !important;
-    max-width: 400px; /* tùy bạn */
-}
-@media screen and (max-width: 400px) {
-    .g-recaptcha { transform: scale(0.85); }
-}
-@media screen and (max-width: 330px) {
-    .g-recaptcha { transform: scale(0.75); }
-}
