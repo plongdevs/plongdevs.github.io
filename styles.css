@@ -459,3 +459,51 @@ body {
 .snowflake:nth-of-type(9) .inner{animation-delay:3s}
 .snowflake:nth-of-type(10){left:25%;animation-delay:0s}
 .snowflake:nth-of-type(11){left:65%;animation-delay:2.5s}
+/* =========================================
+   ReCAPTCHA & Overlay Styles
+   ========================================= */
+
+/* Overlay blur (Lớp mờ che trang web) */
+#blur-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.3);
+    z-index: 999999;
+    transition: opacity 1.5s ease;
+}
+
+#blur-overlay.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Overlay captcha (Hộp chứa Captcha) */
+#captcha-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 20, 20, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000000;
+}
+
+#captcha-container h2 {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#captcha-container.hide {
+    display: none;
+}
