@@ -460,3 +460,7 @@ body {
 .snowflake:nth-of-type(9) .inner{animation-delay:3s}
 .snowflake:nth-of-type(10){left:25%;animation-delay:0s}
 .snowflake:nth-of-type(11){left:65%;animation-delay:2.5s}
+/* Khắc phục xung đột transform với tilt + AOS */
+[data-aos] {
+    transform: translateZ(0); /* Tạo layer riêng để không ghi đè transform */
+}
