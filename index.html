@@ -1,6 +1,5 @@
 
 <!DOCTYPE html>
-
 <html lang="en">
 
 
@@ -437,21 +436,9 @@ Mua đồ chơi adr-pc
 <script>
   // Khởi chạy Vanilla Tilt
   document.addEventListener("DOMContentLoaded", () => {
-  // Vanilla Tilt
-  VanillaTilt.init(document.querySelectorAll(".project"), {
-    max: 15,
-    speed: 400,
-    glare: true,
-    "max-glare": 0.3,
-  });
-
-  // AOS
-  AOS.init({
-    duration: 1000,
-    easing: 'ease-in-out',
-    once: true,
-  });
+  AOS.init();
 });
+
 
 
 const colors = [
