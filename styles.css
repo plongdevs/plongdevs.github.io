@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: ui-sans-serif, system-ui, sans-serif,
-                 Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+        Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
     margin: 0;
     padding: 0;
     background: linear-gradient(0deg, #94bbff, #fff);
@@ -108,8 +108,15 @@ header {
 }
 
 @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
 }
 
 .logo {
@@ -123,7 +130,8 @@ header {
     padding: 2rem;
 }
 
-code, pre {
+code,
+pre {
     width: 100%;
     box-sizing: border-box;
     overflow-x: auto;
@@ -200,7 +208,7 @@ code, pre {
     display: block;
 }
 
-.skill > div {
+.skill>div {
     width: 50%;
     margin: 0 auto;
 }
@@ -238,8 +246,8 @@ code, pre {
 }
 
 .box-shadow {
-    box-shadow: 0 4px 8px 2px rgba(0,0,0,0.1),
-                0 6px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.1),
+        0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .prj-collum {
@@ -250,11 +258,13 @@ code, pre {
     border-radius: 10px;
     box-shadow: ...;
     transition: all 0.5s ease;
-    transform-style: preserve-3d; /* Thêm dòng này */
+    transform-style: preserve-3d;
+    /* Thêm dòng này */
 }
 
 .prj-collum:hover .project {
-    transform: translateY(2px); /* Chuyển hover xuống .project để không ghi đè Vanilla Tilt */
+    transform: translateY(2px);
+    /* Chuyển hover xuống .project để không ghi đè Vanilla Tilt */
 }
 
 
@@ -293,7 +303,7 @@ code, pre {
 /* Contact Section */
 .contact-section {
     padding: 2rem;
-    background-color: hsl(0,0%,calc(100%*(1.1 - var(--dark-mode))));
+    background-color: hsl(0, 0%, calc(100%*(1.1 - var(--dark-mode))));
     text-align: center;
 }
 
@@ -317,7 +327,11 @@ body {
 
 /* Responsive */
 @media screen and (max-width: 1000px) {
-    .menu-button { display: block; margin: 8px 0; }
+    .menu-button {
+        display: block;
+        margin: 8px 0;
+    }
+
     .nav-links {
         opacity: 0;
         pointer-events: none;
@@ -326,7 +340,7 @@ body {
         position: absolute;
         top: 100%;
         right: 0;
-        background-color: rgba(45,45,45,0.8);
+        background-color: rgba(45, 45, 45, 0.8);
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
         padding: 0.5rem 2rem;
@@ -334,27 +348,78 @@ body {
         transition: all 0.3s ease-in-out;
         margin: 0;
     }
-    .th { margin-left: 0; }
-    .nav-links li { margin: 1em 0; }
-    .about-section { flex-direction: column; margin: 0; padding: 0; }
-    .profile { width: 95%; margin: 0 2em; }
-    .code { width: 80%; margin: 0 auto; }
-    pre { display: block; margin: 0 auto; }
-    .profile-pic { width: 100px; height: 100px; }
-    .social-buttons { margin-top: 1em; }
-    .skills-section { padding: 1rem; }
-    .skill > div { width: 100%; }
-    .projects-section { padding: 1rem; margin: 2em; }
-    .contact-section { padding: 1rem; }
+
+    .th {
+        margin-left: 0;
+    }
+
+    .nav-links li {
+        margin: 1em 0;
+    }
+
+    .about-section {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    .profile {
+        width: 95%;
+        margin: 0 2em;
+    }
+
+    .code {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    pre {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    .social-buttons {
+        margin-top: 1em;
+    }
+
+    .skills-section {
+        padding: 1rem;
+    }
+
+    .skill>div {
+        width: 100%;
+    }
+
+    .projects-section {
+        padding: 1rem;
+        margin: 2em;
+    }
+
+    .contact-section {
+        padding: 1rem;
+    }
 }
 
 @media screen and (max-width: 600px) {
-    .prj-collum { flex: auto; width: 100%; }
-    .typing { font-size: 2em; }
+    .prj-collum {
+        flex: auto;
+        width: 100%;
+    }
+
+    .typing {
+        font-size: 2em;
+    }
 }
 
 /* Utilities */
-.hidden { display: none; }
+.hidden {
+    display: none;
+}
 
 .footer {
     background: linear-gradient(to bottom, #1e1e1e, #14181d);
@@ -366,9 +431,18 @@ body {
     position: relative;
 }
 
-.footer a { color: #00aaff; text-decoration: none; }
-.footer a:hover { text-decoration: underline; }
-.footer p { margin: 5px 0; }
+.footer a {
+    color: #00aaff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer p {
+    margin: 5px 0;
+}
 
 .text-gradient {
     background: linear-gradient(to right, #6366f1, #ec4899);
@@ -389,88 +463,187 @@ body {
     height: 100%;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    background: rgba(255,255,255,0.5);
+    background: rgba(255, 255, 255, 0.5);
     z-index: 2000;
     transition: opacity 1s ease;
 }
 
-#blur-overlay.hide { opacity: 0; }
+#blur-overlay.hide {
+    opacity: 0;
+}
 
 /* snow.css - hiệu ứng tuyết rơi */
 
 /* customizable snowflake styling */
 .snowflake {
-  color: #fff;
-  font-size: 1em;
-  font-family: Arial, sans-serif;
-  text-shadow: 0 0 5px #000;
+    color: #fff;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    text-shadow: 0 0 5px #000;
 }
 
-.snowflake, .snowflake .inner {
-  animation-iteration-count: infinite;
-  animation-play-state: running;
+.snowflake,
+.snowflake .inner {
+    animation-iteration-count: infinite;
+    animation-play-state: running;
 }
 
 @keyframes snowflakes-fall {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(110vh); }
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(110vh);
+    }
 }
 
 @keyframes snowflakes-shake {
-  0%,100% { transform: translateX(0); }
-  50% { transform: translateX(80px); }
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(80px);
+    }
 }
 
 .snowflake {
-  position: fixed;
-  top: -10%;
-  z-index: 9999;
-  -webkit-user-select: none;
-  user-select: none;
-  cursor: default;
-  pointer-events: none;
-  animation-name: snowflakes-shake;
-  animation-duration: 3s;
-  animation-timing-function: ease-in-out;
+    position: fixed;
+    top: -10%;
+    z-index: 9999;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+    pointer-events: none;
+    animation-name: snowflakes-shake;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
 }
 
 .snowflake .inner {
-  animation-duration: 10s;
-  animation-name: snowflakes-fall;
-  animation-timing-function: linear;
+    animation-duration: 10s;
+    animation-name: snowflakes-fall;
+    animation-timing-function: linear;
 }
 
-.snowflake:nth-of-type(0){left:1%;animation-delay:0s}
-.snowflake:nth-of-type(0) .inner{animation-delay:0s}
-.snowflake:first-of-type{left:10%;animation-delay:1s}
-.snowflake:first-of-type .inner,.snowflake:nth-of-type(8) .inner{animation-delay:1s}
-.snowflake:nth-of-type(2){left:20%;animation-delay:.5s}
-.snowflake:nth-of-type(2) .inner,.snowflake:nth-of-type(6) .inner{animation-delay:6s}
-.snowflake:nth-of-type(3){left:30%;animation-delay:2s}
-.snowflake:nth-of-type(11) .inner,.snowflake:nth-of-type(3) .inner{animation-delay:4s}
-.snowflake:nth-of-type(4){left:40%;animation-delay:2s}
-.snowflake:nth-of-type(10) .inner,.snowflake:nth-of-type(4) .inner{animation-delay:2s}
-.snowflake:nth-of-type(5){left:50%;animation-delay:3s}
-.snowflake:nth-of-type(5) .inner{animation-delay:8s}
-.snowflake:nth-of-type(6){left:60%;animation-delay:2s}
-.snowflake:nth-of-type(7){left:70%;animation-delay:1s}
-.snowflake:nth-of-type(7) .inner{animation-delay:2.5s}
-.snowflake:nth-of-type(8){left:80%;animation-delay:0s}
-.snowflake:nth-of-type(9){left:90%;animation-delay:1.5s}
-.snowflake:nth-of-type(9) .inner{animation-delay:3s}
-.snowflake:nth-of-type(10){left:25%;animation-delay:0s}
-.snowflake:nth-of-type(11){left:65%;animation-delay:2.5s}
+.snowflake:nth-of-type(0) {
+    left: 1%;
+    animation-delay: 0s
+}
+
+.snowflake:nth-of-type(0) .inner {
+    animation-delay: 0s
+}
+
+.snowflake:first-of-type {
+    left: 10%;
+    animation-delay: 1s
+}
+
+.snowflake:first-of-type .inner,
+.snowflake:nth-of-type(8) .inner {
+    animation-delay: 1s
+}
+
+.snowflake:nth-of-type(2) {
+    left: 20%;
+    animation-delay: .5s
+}
+
+.snowflake:nth-of-type(2) .inner,
+.snowflake:nth-of-type(6) .inner {
+    animation-delay: 6s
+}
+
+.snowflake:nth-of-type(3) {
+    left: 30%;
+    animation-delay: 2s
+}
+
+.snowflake:nth-of-type(11) .inner,
+.snowflake:nth-of-type(3) .inner {
+    animation-delay: 4s
+}
+
+.snowflake:nth-of-type(4) {
+    left: 40%;
+    animation-delay: 2s
+}
+
+.snowflake:nth-of-type(10) .inner,
+.snowflake:nth-of-type(4) .inner {
+    animation-delay: 2s
+}
+
+.snowflake:nth-of-type(5) {
+    left: 50%;
+    animation-delay: 3s
+}
+
+.snowflake:nth-of-type(5) .inner {
+    animation-delay: 8s
+}
+
+.snowflake:nth-of-type(6) {
+    left: 60%;
+    animation-delay: 2s
+}
+
+.snowflake:nth-of-type(7) {
+    left: 70%;
+    animation-delay: 1s
+}
+
+.snowflake:nth-of-type(7) .inner {
+    animation-delay: 2.5s
+}
+
+.snowflake:nth-of-type(8) {
+    left: 80%;
+    animation-delay: 0s
+}
+
+.snowflake:nth-of-type(9) {
+    left: 90%;
+    animation-delay: 1.5s
+}
+
+.snowflake:nth-of-type(9) .inner {
+    animation-delay: 3s
+}
+
+.snowflake:nth-of-type(10) {
+    left: 25%;
+    animation-delay: 0s
+}
+
+.snowflake:nth-of-type(11) {
+    left: 65%;
+    animation-delay: 2.5s
+}
+
 /* Khắc phục xung đột transform với tilt + AOS */
 [data-aos] {
-    transform: translateZ(0); /* Tạo layer riêng để không ghi đè transform */
+    transform: translateZ(0);
+    /* Tạo layer riêng để không ghi đè transform */
 }
+
 .clock {
-    position: fixed; /* Cố định vị trí */
-    bottom: 20px;    /* Cách đáy 20px */
-    right: 20px;     /* Cách lề phải 20px */
+    position: fixed;
+    /* Cố định vị trí */
+    bottom: 20px;
+    /* Cách đáy 20px */
+    right: 20px;
+    /* Cách lề phải 20px */
     padding: 10px 15px;
-    background: rgba(0, 0, 0, 0.7); /* Nền mờ */
+    background: rgba(0, 0, 0, 0.7);
+    /* Nền mờ */
     color: white;
     z-index: 1000;
     border-radius: 5px;
 }
+
+2
