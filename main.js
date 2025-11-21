@@ -1,17 +1,29 @@
 // CONFIGURATION & DATA
 const TYPING_CONFIG = {
     texts: ["Seller.", "Designer.", "Developer."],
-    typingSpeed: 100,        // 1 ký tự mỗi 0.1 giây
-    deletingSpeed: 50,       // xóa chậm hơn
+    typingSpeed: 100, // 1 ký tự mỗi 0.1 giây
+    deletingSpeed: 50, // xóa chậm hơn
     pauseBeforeDeleting: 2000
 };
 
 const SOCIALS = [
-    { name: 'facebook', url: 'https://www.facebook.com/share/1CbVxVCuij/' },
-    { name: 'tiktok', url: 'https://www.tiktok.com/@plongdev.128' },
-    { name: 'telegram', url: 'https://t.me/plongdev' },
-    { name: 'zalo', url: 'https://zalo.me/0936384089' }
-];
+    {
+        name: 'facebook',
+        url: 'https://www.facebook.com/share/1CbVxVCuij/'
+    },
+    {
+        name: 'tiktok',
+        url: 'https://www.tiktok.com/@plongdev.128'
+    },
+    {
+        name: 'telegram',
+        url: 'https://t.me/plongdev'
+    },
+    {
+        name: 'zalo',
+        url: 'https://zalo.me/0936384089'
+    }
+                                ];
 
 // TYPING ANIMATION STATE
 let textIndex = 0;
@@ -109,9 +121,9 @@ function toggleDarkMode() {
 
     body.style.setProperty("--dark-mode", 1 - currentDarkMode);
     body.style.color = isDarkMode ? 'black' : 'white';
-    body.style.background = isDarkMode
-        ? 'linear-gradient(0deg, #94bbff, #fff)'
-        : 'linear-gradient(0deg, #777272, #000)';
+    body.style.background = isDarkMode ?
+        'linear-gradient(0deg, #94bbff, #fff)' :
+        'linear-gradient(0deg, #777272, #000)';
 
     const skillsSection = document.querySelector('.skills-section');
     if (skillsSection) skillsSection.style.backgroundColor = isDarkMode ? 'white' : 'black';
@@ -206,13 +218,13 @@ document.addEventListener('DOMContentLoaded', initializeApp);
             hearts[i].scale += 0.004;
             hearts[i].alpha -= 0.013;
             hearts[i].el.style.cssText = `
-                left:${hearts[i].x}px;
-                top:${hearts[i].y}px;
-                opacity:${hearts[i].alpha};
-                transform:scale(${hearts[i].scale}) rotate(45deg);
-                background:${hearts[i].color};
-                z-index:99999;
-            `;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    left:${hearts[i].x}px;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    top:${hearts[i].y}px;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    opacity:${hearts[i].alpha};
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    transform:scale(${hearts[i].scale}) rotate(45deg);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    background:${hearts[i].color};
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    z-index:99999;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                `;
         }
         requestAnimationFrame(animateHearts);
     }
@@ -225,7 +237,9 @@ document.addEventListener('DOMContentLoaded', initializeApp);
         window.requestAnimationFrame ||
         window.webkitRequestAnimationFrame ||
         window.mozRequestAnimationFrame ||
-        function(cb){ setTimeout(cb, 1000/60); };
+        function(cb) {
+            setTimeout(cb, 1000 / 60);
+        };
 
     initHearts();
 })(window, document);
