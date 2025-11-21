@@ -464,3 +464,13 @@ body {
 [data-aos] {
     transform: translateZ(0); /* Tạo layer riêng để không ghi đè transform */
 }
+.clock {
+    position: fixed; /* Cố định vị trí */
+    bottom: 20px;    /* Cách đáy 20px */
+    right: 20px;     /* Cách lề phải 20px */
+    padding: 10px 15px;
+    background: rgba(0, 0, 0, 0.7); /* Nền mờ */
+    color: white;
+    z-index: 1000;
+    border-radius: 5px;
+}
