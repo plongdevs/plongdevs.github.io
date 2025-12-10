@@ -1,278 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>PLongDev</title>
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>PLongDev</title>
+  <link href="styles.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <link href="app.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-cpp.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-java.min.js"></script>
+<!-- Firebase App (the core Firebase SDK) -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<!-- Firebase Realtime Database -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+  <style>
+    #blur-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      background: rgba(255, 255, 255, 0.3);
+      z-index: 999999;
+      transition: opacity 1.5s ease;
+    }
 
-    <link href="styles.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <link href="app.css" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-cpp.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/prism-java.min.js"></script>
+    #blur-overlay.hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+  </style>
+</head>
 
-    <style>
-      /* Overlay blur */
-      #blur-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        background: rgba(255, 255, 255, 0.3);
-        z-index: 999999;
-        transition: opacity 1.5s ease;
-      }
+<body>
 
-      #blur-overlay.hide {
-        opacity: 0;
-        pointer-events: none;
-      }
-    </style>
+  <div id="blur-overlay"></div>
 
-  </head>
+  <header>
+    <nav class="navbar box-shadow" data-aos="fade-down">
+      <div class="th"></div>
+      <ul class="nav-links">
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">My Stuffs</a></li>
+        <li><a href="#app">Application</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li style="display: flex; width: 26px;">
+          <svg class="color-mode" id="colorMode" viewBox="0 0 400 400" width="30" height="30">
+            <circle cx="200" cy="200" r="195" fill="white" stroke="#000" stroke-width="10"></circle>
+            <path d="M 200 375 A 175 175 0 0 1 200 25"></path>
+            <path d="M 200 300 A 100 100 0 0 1 200 100" fill="#FFF"></path>
+            <path d="M 200 100 A 100 100 180 0 1 200 300"></path>
+          </svg>
+        </li>
+      </ul>
+      <div class="menu-button" id="menu-button">☰</div>
+    </nav>
+  </header>
 
-  <body>
+  <main>
 
-    <!-- Blur overlay -->
-    <div id="blur-overlay"></div>
-
-    <header>
-      <nav class="navbar box-shadow" data-aos="fade-down">
-        <div class="th"></div>
-        <ul class="nav-links">
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#projects">My Stuffs</a></li>
-          <li><a href="#app">Application</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li style="display: flex; width: 26px;">
-            <svg class="color-mode" id="colorMode" viewBox="0 0 400 400" width="30" height="30">
-              <circle cx="200" cy="200" r="195" fill="white" stroke="#000" stroke-width="10"></circle>
-              <path d="M 200 375 A 175 175 0 0 1 200 25"></path>
-              <path d="M 200 300 A 100 100 0 0 1 200 100" fill="#FFF"></path>
-              <path d="M 200 100 A 100 100 180 0 1 200 300"></path>
-            </svg>
-          </li>
-        </ul>
-        <div class="menu-button" id="menu-button">☰</div>
-      </nav>
-    </header>
-
-    <main>
-
-      <section class="about-section" id="about" data-aos="fade-up">
-        <div class="padding profile">
-          <img class="profile-pic box-shadow" src="./img/pf/profile-pic.png" data-aos="zoom-in">
-          <h2 style="margin-bottom:0;">Hi, this is</h2>
-          <h1 style="margin-top:0;">
-            Pham Long
-            <img src="./img/icons/badge.png" alt="" style="height:28px;" />
-          </h1>
-          <div class="typing">
-            and I'm a <span id="typed-text"></span><span class="cursor">|</span>
-          </div>
-          <div id="clock" style="text-align:center; font-size:28px; margin-top:15px; font-weight:bold;"></div>
-          <p class="prose-heading">
-            Thuê bot FreeFire TCP
-            <span class="text-gradient">với giá chỉ 30k/tháng?</span> ib zl:0936384089
-          </p>
-          <div class="social-buttons"></div>
-        </div>
-      </section>
-
-      <section class="projects-section" id="projects">
-        <div class="prj-collum">
-          <div class="project" data-tilt data-tilt-max="15" data-tilt-speed="400" data-aos="fade-up">
-            <h3>Telegram Channel Notification</h3>
-            <a href="https://t.me/playping_chat" target="_blank">
-              <img src="./img/icons/redirect.png" alt="" />
-            </a>
-          </div>
-
-          <div class="project" data-tilt data-tilt-max="15" data-tilt-speed="400" data-aos="fade-up" data-aos-delay="100">
-            <h3>Box Chat Zalo</h3>
-            <a href="https://zalo.me/g/vruic971" target="_blank">
-              <img src="./img/icons/redirect.png" alt="" />
-            </a>
-          </div>
-
-          <div class="project" data-tilt data-tilt-max="15" data-tilt-speed="400" data-aos="fade-up" data-aos-delay="200">
-            <h3>Box Chat Messenger</h3>
-            <a href="https://m.me/j/Abb7x2Ql4c0-_b_r/" target="_blank">
-              <img src="./img/icons/redirect.png" alt="" />
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <h2 id="app" style="text-align:center;" data-aos="fade-up">FakeLag</h2>
-      <section class="app-section" data-aos="fade-up" data-aos-delay="100"></section>
-
-      <div class="line"></div>
-
-      <h2 style="text-align:center; margin-top:5em;" data-aos="fade-up">Data</h2>
-      <div class="data-section" data-aos="fade-up" data-aos-delay="100"></div>
-
-      <div class="line"></div>
-
-      <h2 style="text-align:center; margin-top:5em;" data-aos="fade-up">Other</h2>
-      <div class="other-section" data-aos="fade-up" data-aos-delay="100"></div>
-
-      <div class="wave-container" id="wave1">
-        <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
-          <path class="svg1" d="M0,288L48,272C96,256,192,224,288,213.3C384,203,480,213,576,213.3C672,213,768,203,864,192C960,181,1056,171,1152,165.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" fill="#fff" fill-opacity="1"></path>
-        </svg>
-      </div>
-
-      <section class="skills-section" id="skills">
-        <h2>Programming Language Skills</h2>
-
-        <div>
-          <span>HTML/CSS/JS</span>
-          <div class="skill-bar">
-            <div class="skill-fill" data-percent="76%" style="background-color:#e34c26;"></div>
-          </div>
+    <section class="about-section" id="about" data-aos="fade-up">
+      <div class="padding profile">
+        <img class="profile-pic box-shadow" src="./img/pf/profile-pic.png" data-aos="zoom-in">
+        <h2 style="margin-bottom:0;">Hi, this is</h2>
+        <h1 style="margin-top:0;">
+          Pham Long
+          <img src="./img/icons/badge.png" alt="" style="height:28px;" />
+        </h1>
+        <div class="typing">
+          and I'm a <span id="typed-text"></span><span class="cursor">|</span>
         </div>
 
-        <div>
-          <span>Python</span>
-          <div class="skill-bar">
-            <div class="skill-fill" data-percent="68%" style="background-color:#1f5af9;"></div>
-          </div>
-        </div>
-
-        <div>
-          <span>Java</span>
-          <div class="skill-bar">
-            <div class="skill-fill" data-percent="43%" style="background-color:#89a5f3;"></div>
-          </div>
-        </div>
-
-        <div>
-          <span>C/C++</span>
-          <div class="skill-bar">
-            <div class="skill-fill" data-percent="21%" style="background-color:#f29111;"></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="contact-section" id="contact">
-        <h2>Contact Me</h2>
-        <p>
-          Gmail: <strong>phamlongsoftware@gmail.com</strong>
+        <p class="prose-heading">
+          Thuê bot FreeFire TCP
+          <span class="text-gradient">với giá chỉ 30k/tháng?</span> ib zl:0936384089
         </p>
-      </section>
 
-    </main>
+        <div class="social-buttons"></div>
+      </div>
+    </section>
 
-    <script src="main.js"></script>
-    <script src="app.js"></script>
+    <section class="projects-section" id="projects">
+      <div class="prj-collum">
 
-    <div class="snowflakes" aria-hidden="true">
-      <div class="snowflake">
-        <div class="inner">❅</div>
+        <div class="project" data-tilt data-tilt-max="15" data-tilt-speed="400" data-aos="fade-up">
+          <h3>Telegram Channel Notification</h3>
+          <a href="https://t.me/playping_chat" target="_blank">
+            <img src="./img/icons/redirect.png" alt="" />
+          </a>
+        </div>
+
+        <div class="project" data-tilt data-tilt-max="15" data-tilt-speed="400" data-aos="fade-up" data-aos-delay="100">
+          <h3>Box Chat Zalo</h3>
+          <a href="https://zalo.me/g/vruic971" target="_blank">
+            <img src="./img/icons/redirect.png" alt="" />
+          </a>
+        </div>
+
+        <div class="project" data-tilt data-tilt-max="15" data-tilt-speed="400" data-aos="fade-up" data-aos-delay="200">
+          <h3>Box Chat Messenger</h3>
+          <a href="https://m.me/j/Abb7x2Ql4c0-_b_r/" target="_blank">
+            <img src="./img/icons/redirect.png" alt="" />
+          </a>
+        </div>
+
       </div>
-      <div class="snowflake">
-        <div class="inner">❅</div>
-      </div>
-      <div class="snowflake">
-        <div class="inner">❅</div>
-      </div>
-      <div class="snowflake">
-        <div class="inner">❅</div>
-      </div>
-      <div class="snowflake">
-        <div class="inner">❅</div>
-      </div>
-      <div class="snowflake">
-        <div class="inner">❅</div>
-      </div>
-      <div class="snowflake">
-        <div class="inner">❅</div>
-      </div>
-      <div class="snowflake">
-        <div class="inner">❅</div>
-      </div>
-      <div class="snowflake">
-        <div class="inner">❅</div>
-      </div>
-      <div class="snowflake">
-        <div class="inner">❅</div>
-      </div>
-      <div class="snowflake">
-        <div class="inner">❅</div>
-      </div>
-      <div class="snowflake">
-        <div class="inner">❅</div>
-      </div>
+    </section>
+
+    <h2 id="app" style="text-align:center;" data-aos="fade-up">FakeLag</h2>
+    <section class="app-section" data-aos="fade-up" data-aos-delay="100"></section>
+
+    <div class="line"></div>
+
+    <h2 style="text-align:center; margin-top:5em;" data-aos="fade-up">Data</h2>
+    <div class="data-section" data-aos="fade-up" data-aos-delay="100"></div>
+
+    <div class="line"></div>
+
+    <h2 style="text-align:center; margin-top:5em;" data-aos="fade-up">Other</h2>
+    <div class="other-section" data-aos="fade-up" data-aos-delay="100"></div>
+
+    <div class="wave-container" id="wave1">
+      <svg viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+        <path class="svg1"
+          d="M0,288L48,272C96,256,192,224,288,213.3C384,203,480,213,576,213.3C672,213,768,203,864,192C960,181,1056,171,1152,165.3C1248,160,1344,160,1392,160L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          fill="#fff" fill-opacity="1"></path>
+      </svg>
     </div>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        AOS.init({
-          duration: 1200,
-          easing: 'ease-in-out',
-          once: true,
-          offset: 50
-        });
+    <section class="skills-section" id="skills">
+      <h2>Programming Language Skills</h2>
 
-        const overlay = document.getElementById('blur-overlay');
-        if (overlay) {
-          setTimeout(() => {
-            overlay.classList.add('hide');
-            setTimeout(() => overlay.remove(), 1500);
-          }, 300);
+      <div>
+        <span>HTML/CSS/JS</span>
+        <div class="skill-bar">
+          <div class="skill-fill" data-percent="76%" style="background-color:#e34c26;"></div>
+        </div>
+      </div>
+
+      <div>
+        <span>Python</span>
+        <div class="skill-bar">
+          <div class="skill-fill" data-percent="68%" style="background-color:#1f5af9;"></div>
+        </div>
+      </div>
+
+      <div>
+        <span>Java</span>
+        <div class="skill-bar">
+          <div class="skill-fill" data-percent="43%" style="background-color:#89a5f3;"></div>
+        </div>
+      </div>
+
+      <div>
+        <span>C/C++</span>
+        <div class="skill-bar">
+          <div class="skill-fill" data-percent="21%" style="background-color:#f29111;"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <h2>Contact Me</h2>
+      <p>Gmail: <strong>phamlongsoftware@gmail.com</strong></p>
+    </section>
+
+  </main>
+
+  <script src="main.js"></script>
+  <script src="app.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // AOS
+    AOS.init({
+      duration: 1200,
+      easing: 'ease-in-out',
+      once: true,
+      offset: 50
+    });
+
+    // Blur overlay
+    const overlay = document.getElementById('blur-overlay');
+    if (overlay) {
+      setTimeout(() => {
+        overlay.classList.add('hide');
+        setTimeout(() => overlay.remove(), 1500);
+      }, 300);
+    }
+
+    // Skill bar animation
+    const skillFills = document.querySelectorAll(".skill-fill");
+
+    function animateSkills() {
+      skillFills.forEach(skill => {
+        const rect = skill.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50) {
+          skill.style.width = skill.getAttribute("data-percent");
         }
       });
+    }
 
-      const colors = [
-        "#FF0000", "#00FF00", "#0000FF", "#FFFF00", "#FF00FF", "#00FFFF",
-        "#000000", "#FFFFFF", "#808080", "#800000", "#008000", "#000080",
-        "#FFB3BA", "#FFDFBA", "#FFFFBA", "#BAFFC9", "#BAE1FF",
-        "#D1C4E9", "#F8BBD0", "#C8E6C9", "#FFCCBC", "#FFE0B2",
-        "#39FF14", "#F700FF", "#FF073A", "#0FFFDC", "#FFDC00", "#FF6EC7",
-        "#FF7F50", "#FF4500", "#FFD700", "#ADFF2F", "#00FA9A", "#00CED1",
-        "#1E90FF", "#BA55D3", "#FF69B4", "#FFA07A", "#7B68EE", "#3CB371",
-        "#8B0000", "#556B2F", "#483D8B", "#2F4F4F", "#9400D3", "#4B0082",
-        "#00CED1", "#4682B4", "#D2691E", "#DC143C", "#FF1493", "#00BFFF"
-      ];
+    window.addEventListener("scroll", animateSkills);
+    animateSkills();
+  });
+</script>
+<script>
+    // Chặn chuột phải
+    document.addEventListener('contextmenu', event => event.preventDefault());
 
-      let colorIndex = 0;
-
-      function getVNTime() {
-        const now = new Date();
-        const utc = now.getTime() + now.getTimezoneOffset() * 60000;
-        return new Date(utc + 7 * 3600000);
-      }
-
-      function updateClock() {
-        const vnTime = getVNTime();
-        const h = vnTime.getHours().toString().padStart(2, '0');
-        const m = vnTime.getMinutes().toString().padStart(2, '0');
-        const s = vnTime.getSeconds().toString().padStart(2, '0');
-        const d = vnTime.getDate().toString().padStart(2, '0');
-        const mo = (vnTime.getMonth() + 1).toString().padStart(2, '0');
-        const y = vnTime.getFullYear();
-        const clockEl = document.getElementById('clock');
-        clockEl.textContent = `${d}/${mo}/${y} ${h}:${m}:${s}`;
-        clockEl.style.color = colors[colorIndex];
-        colorIndex = (colorIndex + 1) % colors.length;
-      }
-
-      updateClock();
-      setInterval(updateClock, 1000);
-    </script>
-
-  </body>
-
+    // Chặn các phím tắt F12, Ctrl+Shift+I/C/J, Ctrl+U
+    document.onkeydown = function(e) {
+        // Kiểm tra F12
+        if (event.keyCode == 123) {
+            return false;
+        }
+        // Kiểm tra Ctrl+Shift+I/C/J
+        // Mã ASCII: I=73, C=67, J=74
+        if (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 67 || e.keyCode === 74)) {
+            return false;
+        }
+        // Kiểm tra Ctrl+U (Xem nguồn)
+        if (e.ctrlKey && e.keyCode === 85) {
+            return false;
+        }
+    }
+</script>
+</body>
 </html>

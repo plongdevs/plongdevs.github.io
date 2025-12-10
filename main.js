@@ -1,4 +1,33 @@
 // CONFIGURATION & DATA
+// ==========================================================
+// THÊM CHỨC NĂNG BẢO VỆ DOMAIN
+// ==========================================================
+
+// 1. Cấu hình
+const allowedDomain = 'plongdevs.github.io'; 
+const currentHost = window.location.hostname;
+
+// 2. Định nghĩa chế độ Phát triển (Development Mode)
+// Nếu đang chạy trên localhost, 127.0.0.1, hoặc trực tiếp file://, coi là đang phát triển.
+const isDevelopmentMode = (
+    currentHost === 'localhost' || 
+    currentHost === '127.0.0.1' ||
+    window.location.protocol === 'file:'
+);
+
+// 3. Thực thi chức năng bảo vệ
+if (!isDevelopmentMode) {
+    // Nếu KHÔNG phải là chế độ phát triển, thì tiến hành kiểm tra tên miền
+    if (currentHost !== allowedDomain) {
+        alert("Phát hiện ăn cắp bản quyền! Web sẽ bị vô hiệu hóa và chuyển hướng.");
+        document.body.innerHTML = "<h1>Nội dung này thuộc về PLongDev</h1>";
+        window.location.href = "https://www.google.com";
+    }
+}
+// Lưu ý: Nếu là chế độ phát triển (isDevelopmentMode = true), code sẽ bỏ qua phần kiểm tra này.
+
+// **PHẦN CODE FIREBASE, RENDER VÀ CÁC HÀM KHÁC NẰM Ở DƯỚI ĐÂY**
+// ...
 const TYPING_CONFIG = {
     texts: ["Seller.", "Designer.", "Developer."],
     typingSpeed: 100, // 1 ký tự mỗi 0.1 giây
@@ -137,7 +166,10 @@ function toggleDarkMode() {
     const svg2 = document.querySelector('.svg2');
     if (svg2) svg2.style.fill = isDarkMode ? '#f4f4f4' : 'black';
 }
-
+document.addEventListener("DOMContentLoaded", () => {
+  initializeDarkModeToggle();
+  toggleDarkMode(); // Ép đồng bộ màu toàn bộ khi mới load
+});
 // ENTRANCE ANIMATION
 function playEntranceAnimation() {
     const enterElement = document.querySelector('.enter');
