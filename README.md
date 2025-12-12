@@ -1,2 +1,2 @@
 hi this is my web
-# plongdevs.github.io
+# plong.pages.dev
